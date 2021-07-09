@@ -1,0 +1,1222 @@
+{
+    "CurveDetails": {
+        "CurveInfo": [
+            {
+                "Name": "ANOR",
+                "Min": "0",
+                "Max": "100",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "AT10",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "AT20",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "AT30",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "AT60",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "AT90",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "AX",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "AY",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "AZ",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "BIT",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "BOREHOLE-DEPTH",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "BS",
+                "Min": "0",
+                "Max": "150",
+                "Color": "Magenta",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "CAL",
+                "Min": "6",
+                "Max": "16",
+                "Color": "Black",
+                "DashType": "Dot",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "CALA",
+                "Min": "0",
+                "Max": "100",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "CALI",
+                "Min": "6",
+                "Max": "16",
+                "Color": "Black",
+                "DashType": "Dot",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "CALX",
+                "Min": "6",
+                "Max": "16",
+                "Color": "Black",
+                "DashType": "Dot",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "CGR",
+                "Min": "0",
+                "Max": "150",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "CHR1",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "CHR2",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "CHR3",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "CHRP",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "CNCF",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "CORR",
+                "Min": "1.8",
+                "Max": "2.8",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "DEPT",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "DFL",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Maroon",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "DNC",
+                "Min": "1.8",
+                "Max": "2.8",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "DRES",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "DRHO",
+                "Min": "1.8",
+                "Max": "2.8",
+                "Color": "Magenta",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "DT",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DT1",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DT1R",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DT2",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DT24",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DT2R",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DT3R",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DT4P",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DT4PR",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DTCO",
+                "Min": "40",
+                "Max": "240",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DTSM",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "DTST",
+                "Min": "40",
+                "Max": "140",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "FINC",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "FLD",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "FLD_PRD",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "FNOR",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "FX",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "FY",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "FZ",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "GR_CAL",
+                "Min": "0",
+                "Max": "150",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "GR-2",
+                "Min": "0",
+                "Max": "100",
+                "Color": "#7030A0",
+                "DashType": "DashDot",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "GR-COPY",
+                "Min": "0",
+                "Max": "150",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "HAZI",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "HAZIM",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "HDRA",
+                "Min": "1.8",
+                "Max": "2.8",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "HDRS",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "HMRS",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "HTEN",
+                "Min": "0",
+                "Max": "100",
+                "Color": "#400000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "ILD",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "ILM",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Black",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "K",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "LL3",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Black",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "M2R1",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Black",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "M2R2",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "M2R3",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "M2R6",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "M2R9",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "M2RX",
+                "Min": "0.2",
+                "Max": "100",
+                "Color": "#002060",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "MLR1C",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "MLR2",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "MLR2C",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Black",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "MLR3C",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "MLR4",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "MLR4C",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "MSFL",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Black",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "P1AZ",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "P1NO",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PC1",
+                "Min": "0",
+                "Max": "1",
+                "Color": "Black",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PC2",
+                "Min": "0",
+                "Max": "1",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PC3",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PC4",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PE",
+                "Min": "0",
+                "Max": "10",
+                "Color": "Black",
+                "DashType": "Dot",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PEF",
+                "Min": "0",
+                "Max": "10",
+                "Color": "Black",
+                "DashType": "Dot",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PEFZ",
+                "Min": "0",
+                "Max": "10",
+                "Color": "Black",
+                "DashType": "Dot",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PHIN",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "PHIT",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "PIGN",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "PIMPMODEL",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PR",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PROB_F0",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PROB_F1",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PROB_F2",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PROB_F3",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "PROB_F4",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RB",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RD",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RD",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RHGA",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RHOBMODEL",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RHOZ",
+                "Min": "1.8",
+                "Max": "2.8",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RHOZ_GCC",
+                "Min": "1.8",
+                "Max": "2.8",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RLA1",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RLA2",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "LightGreen",
+                "DashType": "DashDot",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RLA3",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Blue",
+                "DashType": "DashDotDot",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RLA4",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "DarkOrange",
+                "DashType": "Dot",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RLA5",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RMLL",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RMLL",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RS",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RS",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "RTM",
+                "Min": "0",
+                "Max": "100",
+                "Color": "Black",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "SDEV",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "SDEVM",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "SGR",
+                "Min": "0",
+                "Max": "150",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "SP",
+                "Min": "0",
+                "Max": "100",
+                "Color": "Black",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "SPDH",
+                "Min": "0",
+                "Max": "100",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "SPWDH",
+                "Min": "0",
+                "Max": "350",
+                "Color": "Black",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "SUWI",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "SXWI",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "TEN",
+                "Min": "0",
+                "Max": "100",
+                "Color": "Black",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "TEN2",
+                "Min": "0",
+                "Max": "100",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "TENS",
+                "Min": "0",
+                "Max": "100",
+                "Color": "Olive",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "TH",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "TNPH",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "TTEN",
+                "Min": "0",
+                "Max": "100",
+                "Color": "#400000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "TTEN2",
+                "Min": "0",
+                "Max": "100",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "U",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "VCL",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VCL1",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VCL2",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VCOA",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VMHY",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VORT",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VP",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "VPMODEL",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "VPVS",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "VPVS_RAW",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "VPVSMODEL",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "VQUA",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VS",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "VSMODEL",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "VUGA",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VUWA",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VXBW",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VXGA",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "VXWA",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "ZDEN",
+                "Min": "1.8",
+                "Max": "2.8",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "DEPTH",
+                "Min": "0",
+                "Max": "0",
+                "Color": "#00000000",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "GR",
+                "Min": "0",
+                "Max": "150",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "LLD",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "LLS",
+                "Min": "0.2",
+                "Max": "200",
+                "Color": "Green",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "NPHI",
+                "Min": "-0.06",
+                "Max": "0.54",
+                "Color": "Blue",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            },
+            {
+                "Name": "RHOB",
+                "Min": "1.8",
+                "Max": "2.8",
+                "Color": "Red",
+                "DashType": "Solid",
+                "IsReverse": "No"
+            },
+            {
+                "Name": "GR-B1",
+                "Min": "0",
+                "Max": "100",
+                "Color": "#FF8000",
+                "DashType": "Solid",
+                "IsReverse": "Yes"
+            }
+        ]
+    }
+}

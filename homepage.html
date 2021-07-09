@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="app.css" rel="stylesheet" />   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    
+    <style>
+      .maincontent
+      {
+        text-align: center;
+        display:flex;
+        height:42em;
+        width:99%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+      }
+      .tree
+      {
+        width:15%;
+        border: 1px solid black;
+      }
+      .graph
+      {
+        width:100%;
+        height:80%;
+        
+        display: flex;
+        border: 1px solid black;
+        /* background-color: lawngreen; */
+      }
+      .centerheader
+      {
+        height:20%;
+        border: 1px solid black;
+        display: flex;
+        /* background-color:red; */
+      }
+      .center
+      {
+        width:70%;
+        border: 1px solid black;
+      }
+      .lasdata
+      {
+        width:15%;
+        border: 1px solid black;
+      }
+      .maincontentheader
+      {
+        height:20%;
+        /* background-color: red; */
+        border: 1px solid black;
+      }
+      .header
+      {
+        text-align: center;
+        border: 2px solid white;
+        background-color: lawngreen;
+        font-weight:bolder;
+      }
+      .depth
+      {
+        width:8%;
+        height: 100%;
+        border: 1px solid black;
+      }
+      .firstgraph
+      {
+        width:23%;
+        height: 100%;
+        border: 1px solid black;
+      }
+      .secondgraph
+      {
+        width:23%;
+        height: 100%;
+        border: 1px solid black;
+      }
+      .thirdgraph
+      {
+        width:23%;
+        height: 100%;
+        border: 1px solid black;
+      }
+      .fourthgraph
+      {
+        width:23%;
+        height: 100%;
+        border: 1px solid black;
+      }
+      .treebody,.lasbody
+      {
+        height: 80%;
+        border: 1px solid black;
+      }
+    </style>
+</head>
+
+<body>
+  <div class="header"><h3>Log Data Viewer</h3></div>
+    <!-- <header>
+        <h3>Log Data Viewer</h3>
+    </header> -->
+    <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header text-left">
+           
+              <!-- FILL YOUR CODE FOR BRAND AND TOGGLE (ICON BAR) FOR RESPONSIVE NAVIGATION BAR -->
+              <button type="button" id="btn-id" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <!-- <a class="navbar-brand" href="#">MyBrand</a> -->
+          </div>
+
+          <!-- Collect the nav links, forms, and other contents for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                  <li><a href="#">Upload</a></li>
+                  <li><a href="#">Download</a></li>
+              </ul>
+          </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+  </nav>
+
+  <div class="maincontent">
+    <div class="tree">
+      <div class="maincontentheader">Main Details</div>
+      <div class="treebody">tree body</div>
+    </div>
+    <div class="center">
+      <div class="centerheader">
+        <div class="depth">depth</div>
+        <div class="firstgraph">firstgraph</div>
+        <div class="secondgraph">secondgraph</div>
+        <div class="thirdgraph">thirdgraph</div>
+        <div class="fourthgraph">fourthgraph</div>
+      </div>
+      <div  class="graph">
+        <div class="depth">depth</div>
+        <div id="container1" class="firstgraph"></div>
+        <div id="container2" class="secondgraph"></div>
+        <div id="container3" class="thirdgraph">thirdgraph</div>
+        <div id="container4" class="fourthgraph">fourthgraph</div>
+      </div>
+    </div>
+    <div class="lasdata">
+      <div class="maincontentheader">Las Data</div>
+      <div class="lasbody">las Body</div>
+    </div>
+  </div>
+  <script src="https://code.highcharts.com/stock/highstock.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+    <script type="text/javascript" src="action.js"> </script>  
+</body>
+</html>

@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+#a {
+    width: 1000px;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin: 0;
+    padding: 0;
+    float: left;
+    background: Red;
+    width: 33.33%;
+    height: 280px;
+}
+
+#container2 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    background: Green;
+    width: 33.33%;
+    height: 280px;
+}
+
+#container3 {
+    margin: 0;
+    padding: 0;
+    float: right;
+    background: blue;
+    width: 33.33%;
+    height: 280px;
+}

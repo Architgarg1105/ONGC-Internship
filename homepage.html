@@ -61,7 +61,7 @@
       {
         text-align: center;
         border: 2px solid white;
-        background-color: lawngreen;
+        background-color: rgb(211, 211, 211);
         font-weight:bolder;
       }
       .depth
@@ -72,33 +72,81 @@
       }
       .firstgraph
       {
-        width:23%;
+        width:15%;
         height: 100%;
-        border: 1px solid black;
+        /* border: 1px solid black; */
       }
       .secondgraph
       {
-        width:23%;
+        width:15%;
         height: 100%;
-        border: 1px solid black;
+        /* border: 1px solid black; */
       }
       .thirdgraph
       {
-        width:23%;
+        width:15%;
         height: 100%;
-        border: 1px solid black;
+        /* border: 1px solid black; */
       }
       .fourthgraph
       {
-        width:23%;
+        width:15%;
         height: 100%;
-        border: 1px solid black;
+        /* border: 1px solid black; */
       }
       .treebody,.lasbody
       {
-        height: 80%;
+        height: 100%;
         border: 1px solid black;
+        background-color: rgb(212, 209, 209);
       }
+      table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    border-bottom: 1px solid rgb(48, 44, 44);
+}
+
+th {
+    text-align: center;    
+}
+ul, #myUL {
+  list-style-type: none;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
     </style>
 </head>
 
@@ -127,6 +175,8 @@
               <ul class="nav navbar-nav">
                   <li><a href="#">Upload</a></li>
                   <li><a href="#">Download</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Help</a></li>
               </ul>
           </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
@@ -134,33 +184,142 @@
 
   <div class="maincontent">
     <div class="tree">
-      <div class="maincontentheader">Main Details</div>
-      <div class="treebody">tree body</div>
+      <!-- <div class="maincontentheader">Main Details</div> -->
+      <div class="treebody">
+        <ul id="myUL">
+          <li><span class="caret">Beverages</span>
+            <ul class="nested">
+              <li>Water</li>
+              <li>Coffee</li>
+              <li><span class="caret">Tea</span>
+                <ul class="nested">
+                  <li>Black Tea</li>
+                  <li>White Tea</li>
+                  <li><span class="caret">Green Tea</span>
+                    <ul class="nested">
+                      <li>Sencha</li>
+                      <li>Gyokuro</li>
+                      <li>Matcha</li>
+                      <li>Pi Lo Chun</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>  
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="center">
       <div class="centerheader">
-        <div class="depth">depth</div>
+        <!-- <div class="depth">depth</div> -->
         <div class="firstgraph">firstgraph</div>
         <div class="secondgraph">secondgraph</div>
         <div class="thirdgraph">thirdgraph</div>
-        <div class="fourthgraph">fourthgraph</div>
+        <!-- <div class="fourthgraph">fourthgraph</div> -->
       </div>
       <div  class="graph">
-        <div class="depth">depth</div>
+        <!-- <div class="depth">depth</div>
         <div id="container1" class="firstgraph"></div>
-        <div id="container2" class="secondgraph"></div>
+        <div id="container2" class="secondgraph">secondgraph</div>
         <div id="container3" class="thirdgraph">thirdgraph</div>
-        <div id="container4" class="fourthgraph">fourthgraph</div>
+        <div id="container4" class="fourthgraph">fourthgraph</div> -->
+        <div id="container" style="height: 400px; min-width: 310px"></div>
+  <div id="container2" style="height: 400px; min-width: 310px"></div>
+  <div id="container3" style="height: 400px; min-width: 310px"></div>
       </div>
     </div>
     <div class="lasdata">
-      <div class="maincontentheader">Las Data</div>
-      <div class="lasbody">las Body</div>
+      <!-- <div class="maincontentheader">Las Data</div> -->
+     
+      <div class="lasbody">
+        <h3>Well Information</h3>
+        <table>
+          <thead>
+              <tr>
+                  <th>Unit</th>
+                  <th>Data</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>STRT.F</td>
+                  <td>9.5000</td>
+              </tr>
+              <tr>
+                <td>STRT.F</td>
+                <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+          </tr>
+          <tr>
+            <td>STRT.F</td>
+            <td>9.5000</td>
+        </tr>
+        <tr>
+          <td>STRT.F</td>
+          <td>9.5000</td>
+      </tr>
+      <tr>
+        <td>STRT.F</td>
+        <td>9.5000</td>
+    </tr>
+    <tr>
+      <td>STRT.F</td>
+      <td>9.5000</td>
+  </tr>
+  <tr>
+    <td>STRT.F</td>
+    <td>9.5000</td>
+</tr>
+<tr>
+  <td>STRT.F</td>
+  <td>9.5000</td>
+</tr>
+<tr>
+<td>STRT.F</td>
+<td>9.5000</td>
+</tr>
+<tr>
+  <td>STRT.F</td>
+  <td>9.5000</td>
+</tr>
+<tr>
+<td>STRT.F</td>
+<td>9.5000</td>
+</tr>
+<tr>
+  <td>STRT.F</td>
+  <td>9.5000</td>
+</tr>
+<tr>
+<td>STRT.F</td>
+<td>9.5000</td>
+</tr>
+          </tbody>
+      </table>
+      </div>
     </div>
   </div>
   <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
     <script type="text/javascript" src="action.js"> </script>  
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/stock/6.0.3/highstock.js"></script>
+<script src="highcharts.js"></script>
+<script>
+  var toggler = document.getElementsByClassName("caret");
+  var i;
+  
+  for (i = 0; i < toggler.length; i++) {
+    toggler[i].addEventListener("click", function() {
+      this.parentElement.querySelector(".nested").classList.toggle("active");
+      this.classList.toggle("caret-down");
+    });
+  }
+  </script>
 </body>
 </html>

@@ -25,6 +25,7 @@ Highcharts.chart('container', {
         enabled: false
     },
     xAxis: {
+        
         minorTickInterval: 'auto',
         tickInterval: 20,
         categories: [6.0000,
@@ -1956,6 +1957,9 @@ Highcharts.chart('container', {
     },
 
     yAxis: [{
+        labels: {
+            enabled: false
+        },
         minorTickInterval: 'auto',
         title: {
             text: ' '
@@ -1965,6 +1969,9 @@ Highcharts.chart('container', {
         type: 'logarithmic',
         opposite: true,
     }, {
+        labels: {
+            enabled: false
+        },
         minorTickInterval: 'auto',
         title: {
             text: ' '
@@ -1972,7 +1979,8 @@ Highcharts.chart('container', {
         opposite: true,
     }],
     series: [{
-        name: 'GR',
+        // name: 'GR',
+        showInLegend:false,
         yAxis: 0,
         data: [23.8362,
             28.8864,
@@ -3895,7 +3903,8 @@ Highcharts.chart('container', {
             52.8421
         ]
     }, {
-        name: 'SP',
+        // name: 'SP',
+        showInLegend:false,
         yAxis: 1,
         data: [10, 50, 40, 10, 50, 30, 60, 30, 20],
 
@@ -3928,7 +3937,10 @@ Highcharts.chart('container2', {
         enabled: false
     },
     xAxis: {
-        visible: false,
+        labels: {
+            enabled: false
+        },
+        visible: true,
         minorTickInterval: 'auto',
         tickInterval: 20,
         categories: [6.0000,
@@ -5860,6 +5872,9 @@ Highcharts.chart('container2', {
     },
 
     yAxis: [{
+        labels: {
+            enabled: false
+        },
         minorTickInterval: 'auto',
         title: {
             text: ' '
@@ -5869,6 +5884,9 @@ Highcharts.chart('container2', {
         type: 'logarithmic',
         opposite: true,
     }, {
+        labels: {
+            enabled: false
+        },
         minorTickInterval: 'auto',
         title: {
             text: ' '
@@ -5876,7 +5894,8 @@ Highcharts.chart('container2', {
         opposite: true,
     }],
     series: [{
-        name: 'GR',
+        // name: 'GR',
+        showInLegend:false,
         yAxis: 0,
         data: [23.8362,
             28.8864,
@@ -7799,7 +7818,8 @@ Highcharts.chart('container2', {
             52.8421
         ]
     }, {
-        name: 'SP',
+        // name: 'SP',
+        showInLegend:false,
         yAxis: 1,
         data: [10, 50, 40, 10, 50, 30, 60, 30, 20],
 
@@ -7832,7 +7852,10 @@ Highcharts.chart('container3', {
         enabled: false
     },
     xAxis: {
-        visible: false,
+        labels: {
+            enabled: false
+        },
+        visible: true,
         minorTickInterval: 'auto',
         tickInterval: 20,
         categories: [6.0000,
@@ -9764,6 +9787,10 @@ Highcharts.chart('container3', {
     },
 
     yAxis: [{
+        // visible:false,
+        labels: {
+            enabled: false
+        },
         minorTickInterval: 'auto',
         title: {
             text: ' '
@@ -9773,6 +9800,9 @@ Highcharts.chart('container3', {
         type: 'logarithmic',
         opposite: true,
     }, {
+        labels: {
+            enabled: false
+        },
         minorTickInterval: 'auto',
         title: {
             text: ' '
@@ -9780,7 +9810,8 @@ Highcharts.chart('container3', {
         opposite: true,
     }],
     series: [{
-        name: 'GR',
+        // name: 'GR',
+        showInLegend:false,
         yAxis: 0,
         data: [23.8362,
             28.8864,
@@ -11703,7 +11734,8 @@ Highcharts.chart('container3', {
             52.8421
         ]
     }, {
-        name: 'SP',
+        // name: 'SP',
+        showInLegend:false,
         yAxis: 1,
         data: [10, 50, 40, 10, 50, 30, 60, 30, 20],
 

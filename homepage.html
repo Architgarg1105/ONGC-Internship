@@ -72,19 +72,19 @@
       }
       .firstgraph
       {
-        width:15%;
+        width:45%;
         height: 100%;
         /* border: 1px solid black; */
       }
       .secondgraph
       {
-        width:15%;
+        width:45%;
         height: 100%;
         /* border: 1px solid black; */
       }
       .thirdgraph
       {
-        width:15%;
+        width:45%;
         height: 100%;
         /* border: 1px solid black; */
       }
@@ -112,46 +112,131 @@ tr {
 th {
     text-align: center;    
 }
-ul, #myUL {
-  list-style-type: none;
-}
+#fontSizeWrapper { font-size: 16px; }
 
-#myUL {
-  margin: 0;
-  padding: 0;
-}
+#fontSize {
+  width: 100px;
+  font-size: 1em;
+  }
 
-.caret {
-  cursor: pointer;
-  -webkit-user-select: none; /* Safari 3.1+ */
-  -moz-user-select: none; /* Firefox 2+ */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none;
-}
+/* ————————————————————–
+  Tree core styles
+*/
+.tree123 { margin: 1em; }
 
-.caret::before {
-  content: "\25B6";
-  color: black;
+.tree123 input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  }
+
+.tree123 input ~ ul { display: none; }
+
+.tree123 input:checked ~ ul { display: block; }
+
+/* ————————————————————–
+  Tree rows
+*/
+.tree123 li {
+  line-height: 1.2;
+  position: relative;
+  padding: 0 0 1em 1em;
+  }
+
+.tree123 ul li { padding: 1em 0 0 1em; }
+
+.tree123 > li:last-child { padding-bottom: 0; }
+
+/* ————————————————————–
+  Tree labels
+*/
+.tree_label {
+  position: relative;
   display: inline-block;
-  margin-right: 6px;
-}
+  background: #fff;
+  }
 
-.caret-down::before {
-  transform: rotate(90deg);  
-}
+label.tree_label { cursor: pointer; }
 
-.nested {
-  display: none;
-}
+label.tree_label:hover { color: #666; }
 
-.active {
+/* ————————————————————–
+  Tree expanded icon
+*/
+label.tree_label:before {
+  background: #000;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0 1em 0 -2em;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  content: '+';
+  text-align: center;
+  line-height: .9em;
+  }
+
+:checked ~ label.tree_label:before { content: '–'; }
+
+/* ————————————————————–
+  Tree branches
+*/
+.tree123 li:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -.5em;
   display: block;
+  width: 0;
+  border-left: 1px solid #777;
+  content: "";
+  }
+
+.tree_label:after {
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  display: block;
+  height: 0.5em;
+  width: 1em;
+  border-bottom: 1px solid #777;
+  border-left: 1px solid #777;
+  border-radius: 0 0 0 .3em;
+  content: '';
+  }
+
+label.tree_label:after { border-bottom: 0; }
+
+:checked ~ label.tree_label:after {
+  border-radius: 0 .3em 0 0;
+  border-top: 1px solid #777;
+  border-right: 1px solid #777;
+  border-bottom: 0;
+  border-left: 0;
+  bottom: 0;
+  top: 0.5em;
+  height: auto;
+  }
+
+.tree123 li:last-child:before {
+  height: 1em;
+  bottom: auto;
+  }
+
+.tree123 > li:last-child:before { display: none; }
+
+.tree_custom {
+  display: block;
+  background: #eee;
+  padding: 1em;
+  border-radius: 0.3em;
 }
     </style>
 </head>
 
 <body>
-  <div class="header"><h3>Log Data Viewer</h3></div>
+  <div class="header"><h3 style="font-weight:bold;">LOG DATA VIEWER</h3></div>
     <!-- <header>
         <h3>Log Data Viewer</h3>
     </header> -->
@@ -186,36 +271,91 @@ ul, #myUL {
     <div class="tree">
       <!-- <div class="maincontentheader">Main Details</div> -->
       <div class="treebody">
-        <ul id="myUL">
-          <li><span class="caret">Beverages</span>
-            <ul class="nested">
-              <li>Water</li>
-              <li>Coffee</li>
-              <li><span class="caret">Tea</span>
-                <ul class="nested">
-                  <li>Black Tea</li>
-                  <li>White Tea</li>
-                  <li><span class="caret">Green Tea</span>
-                    <ul class="nested">
-                      <li>Sencha</li>
-                      <li>Gyokuro</li>
-                      <li>Matcha</li>
-                      <li>Pi Lo Chun</li>
+        <!-- <div id="fontSizeWrapper">
+          <label for="fontSize">Font size</label>
+          <input type="range" value="1" id="fontSize" step="0.5" min="0.5" max="5" />
+        </div> -->
+        <ul class="tree123">
+          
+            <input type="checkbox" checked="checked" id="c1" />
+            <label class="tree_label" for="c1">Wells</label>
+            <ul>
+                <input type="checkbox" checked="checked" id="c2" />
+                <!-- <label for="c2" class="tree_label">NKK-7</label> -->
+                  <!-- <li><span class="tree_label">Curves</span></li> -->
+                  <!-- <li><span class="tree_label">Level 2</span></li> -->
+                    <li><span class="tree_label">CNCF</span></li>
+                    <li><span class="tree_label">GR</span></li>
+                    <li><span class="tree_label">M2R1</span></li>
+                    <li><span class="tree_label">M2R6</span></li>
+                    <li><span class="tree_label">M2RX</span></li>
+                    <li><span class="tree_label">ZDEN</span></li>
+              <!-- <li>
+                <input type="checkbox" id="c3" />
+                <label for="c3" class="tree_label">Looong level 1 <br/>label text <br/>with line-breaks</label>
+                <ul>
+                  <li><span class="tree_label">Level 2</span></li>
+                  <li>
+                    <input type="checkbox" id="c4" />
+                    <label for="c4" class="tree_label"><span class="tree_custom">Specified tree item view</span></label>
+                    <ul>
+                      <li><span class="tree_label">Level 3</span></li>
                     </ul>
                   </li>
                 </ul>
-              </li>  
+              </li> -->
             </ul>
-          </li>
+          
+          
+          
+          <!-- <li>
+            <input type="checkbox" id="c5" />
+            <label class="tree_label" for="c5">Level 0</label>
+            <ul>
+              <li>
+                <input type="checkbox" id="c6" />
+                <label for="c6" class="tree_label">Level 1</label>
+                <ul>
+                  <li><span class="tree_label">Level 2</span></li>
+                </ul>
+              </li>
+              <li>
+                <input type="checkbox" id="c7" />
+                <label for="c7" class="tree_label">Level 1</label>
+                <ul>
+                  <li><span class="tree_label">Level 2</span></li>
+                  <li>
+                    <input type="checkbox" id="c8" />
+                    <label for="c8" class="tree_label">Level 2</label>
+                    <ul>
+                      <li><span class="tree_label">Level 3</span></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li> -->
         </ul>
       </div>
     </div>
     <div class="center">
       <div class="centerheader">
         <!-- <div class="depth">depth</div> -->
-        <div class="firstgraph">firstgraph</div>
-        <div class="secondgraph">secondgraph</div>
-        <div class="thirdgraph">thirdgraph</div>
+        <div style="font-weight:bold;" class="firstgraph"><h4 style="font-weight: bold;">First Graph</h4>
+        
+        <p style="color:red;">GR: <span style="color:black">0-120</span></p>
+        <p style="color:green">SP: <span style="color:black">20-120</span></p>
+      </div>
+        <div style="font-weight:bold;" class="secondgraph"><h4 style="font-weight: bold;">Second Graph</h4>
+          
+        <p style="color:red">GR: <span style="color:black">0-120</span></p>
+        <p style="color:green">SP: <span style="color:black">20-120</span></p>
+      </div>
+        <div style="font-weight:bold;" class="thirdgraph"><h4 style="font-weight: bold;">Third Graph</h4>
+         
+        <p style="color:red">GR: <span style="color:black">0-120</span></p>
+        <p style="color:green">SP: <span style="color:black">20-120</span></p>
+      </div>
         <!-- <div class="fourthgraph">fourthgraph</div> -->
       </div>
       <div  class="graph">
@@ -226,14 +366,14 @@ ul, #myUL {
         <div id="container4" class="fourthgraph">fourthgraph</div> -->
         <div id="container" style="height: 400px; min-width: 310px"></div>
   <div id="container2" style="height: 400px; min-width: 310px"></div>
-  <div id="container3" style="height: 400px; min-width: 310px"></div>
+  <div id="container3" style="height: 400px;margin-left:6%; min-width: 310px"></div>
       </div>
     </div>
     <div class="lasdata">
       <!-- <div class="maincontentheader">Las Data</div> -->
      
       <div class="lasbody">
-        <h3>Well Information</h3>
+        <h3 style="font-weight: bold;">Well Information</h3>
         <table>
           <thead>
               <tr>
@@ -243,12 +383,12 @@ ul, #myUL {
           </thead>
           <tbody>
               <tr>
-                  <td>STRT.F</td>
-                  <td>9.5000</td>
+                  <td>STRT.FT</td>
+                  <td>6.000</td>
               </tr>
               <tr>
-                <td>STRT.F</td>
-                <td>9.5000</td>
+                <td>STOP.FT</td>
+                <td>3533.5000</td>
             </tr>
             <tr>
               <td>STRT.F</td>
@@ -311,15 +451,43 @@ ul, #myUL {
 <script src="https://code.highcharts.com/stock/6.0.3/highstock.js"></script>
 <script src="highcharts.js"></script>
 <script>
-  var toggler = document.getElementsByClassName("caret");
-  var i;
+  function isNumber(n) {
+  return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function setFontSize(el) {
+    var fontSize = el.val();
+    
+    if ( isNumber(fontSize) && fontSize >= 0.5 ) {
+      $('body').css({ fontSize: fontSize + 'em' });
+    } else if ( fontSize ) {
+      el.val('1');
+      $('body').css({ fontSize: '1em' });  
+    }
+}
+
+$(function() {
   
-  for (i = 0; i < toggler.length; i++) {
-    toggler[i].addEventListener("click", function() {
-      this.parentElement.querySelector(".nested").classList.toggle("active");
-      this.classList.toggle("caret-down");
+  $('#fontSize')
+    .bind('change', function(){ setFontSize($(this)); })
+    .bind('keyup', function(e){
+      if (e.keyCode == 27) {
+        $(this).val('1');
+        $('body').css({ fontSize: '1em' });  
+      } else {
+        setFontSize($(this));
+      }
     });
-  }
-  </script>
+  
+  $(window)
+    .bind('keyup', function(e){
+      if (e.keyCode == 27) {
+        $('#fontSize').val('1');
+        $('body').css({ fontSize: '1em' });  
+      }
+    });
+  
+});
+</script>
 </body>
 </html>

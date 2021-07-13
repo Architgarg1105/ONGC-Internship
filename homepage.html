@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Home Page</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="app.css" rel="stylesheet" />   
+    <!-- <link href="app.css" rel="stylesheet" />    -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     
@@ -258,7 +258,9 @@ label.tree_label:after { border-bottom: 0; }
           <!-- Collect the nav links, forms, and other contents for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                  <li><a href="#">Upload</a></li>
+                  <li><a style="cursor: pointer;" data-toggle="modal" data-target="#exampleModal">Upload</a>
+                 </li>
+                 
                   <li><a href="#">Download</a></li>
                   <li><a href="#">About</a></li>
                   <li><a href="#">Help</a></li>
@@ -266,7 +268,8 @@ label.tree_label:after { border-bottom: 0; }
           </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
   </nav>
-
+ 
+                  
   <div class="maincontent">
     <div class="tree">
       <!-- <div class="maincontentheader">Main Details</div> -->
@@ -278,7 +281,7 @@ label.tree_label:after { border-bottom: 0; }
         <ul class="tree123">
           
             <input type="checkbox" checked="checked" id="c1" />
-            <label class="tree_label" for="c1">Wells</label>
+            <label class="tree_label" for="c1">Curves</label>
             <ul>
                 <input type="checkbox" checked="checked" id="c2" />
                 <!-- <label for="c2" class="tree_label">NKK-7</label> -->
@@ -365,8 +368,8 @@ label.tree_label:after { border-bottom: 0; }
         <div id="container3" class="thirdgraph">thirdgraph</div>
         <div id="container4" class="fourthgraph">fourthgraph</div> -->
         <div id="container" style="height: 400px; min-width: 310px"></div>
-  <div id="container2" style="height: 400px; min-width: 310px"></div>
-  <div id="container3" style="height: 400px;margin-left:6%; min-width: 310px"></div>
+        <div id="container2" style="height: 400px; min-width: 310px"></div>
+        <div id="container3" style="height: 400px;margin-left:6%; min-width: 310px"></div>
       </div>
     </div>
     <div class="lasdata">
@@ -443,13 +446,39 @@ label.tree_label:after { border-bottom: 0; }
       </div>
     </div>
   </div>
+  <!-- Modal -->
+  <div  class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div style="text-align: center;background-color: rgb(243, 243, 243);" class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h3 style="text-align: center;font-weight: bold;" class="modal-title" id="exampleModalLabel">Upload LAS File</h3>
+          
+        </div>
+        <div style="text-align: center;background-color: rgb(211, 211, 211);" class="modal-body">
+          <form action= "/uploader" method="post" Enctype="multipart/form-data">
+            <b>
+            <input style="margin:auto;border:3px solid black;cursor: pointer;" type="file" name="file" multiple><br><br>
+            <input style="background-color: rgb(255, 255, 255);" type="submit" value="upload"></b>
+          </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div> -->
+      </div>
+    </div>
+  </div>
   <script src="https://code.highcharts.com/stock/highstock.js"></script>
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
     <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
-    <script type="text/javascript" src="action.js"> </script>  
+    <!-- <script type="text/javascript" src="action.js"> </script>   -->
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="https://code.highcharts.com/stock/6.0.3/highstock.js"></script>
-<script src="highcharts.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename = 'highcharts.js') }}"></script>
+<!-- <script src="highcharts1.js"></script> -->
 <script>
   function isNumber(n) {
   return !isNaN(parseFloat(n)) && isFinite(n);

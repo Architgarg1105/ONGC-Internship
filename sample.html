@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Web Page</title>
+</head>
+
+<body>
+  <p>Hello</p>
+  <button id="my_button" type="button">Click me</button>
+  <div id="ajax_results"></div>
+
+<!-- Download jquery library: -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<!-- My jquery code: -->
+<script>
+  $("#my_button").on('click', function() {
+    $.get("http://localhost:8080/cgi-bin/my_prog.py", function(data) {
+      $("#ajax_results").text(data);
+    })
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+.maincontent
+      {
+        text-align: center;
+        display:flex;
+        height:42em;
+        width:99%;
+        margin-left: 0.5%;
+        margin-right: 0.5%;
+      }
+      .tree
+      {
+        width:15%;
+        border: 1px solid black;
+      }
+      .graph
+      {
+        width:100%;
+        height:80%;
+        
+        display: flex;
+        border: 1px solid black;
+        /* background-color: lawngreen; */
+      }
+      .centerheader
+      {
+        height:20%;
+        border: 1px solid black;
+        display: flex;
+        /* background-color:red; */
+      }
+      .center
+      {
+        width:70%;
+        border: 1px solid black;
+      }
+      .lasdata
+      {
+        width:15%;
+        border: 1px solid black;
+      }
+      .maincontentheader
+      {
+        height:20%;
+        /* background-color: red; */
+        border: 1px solid black;
+      }
+      .header
+      {
+        text-align: center;
+        border: 2px solid white;
+        background-color: rgb(211, 211, 211);
+        font-weight:bolder;
+      }
+      .depth
+      {
+        width:8%;
+        height: 100%;
+        border: 1px solid black;
+      }
+      .firstgraph
+      {
+        width:45%;
+        height: 100%;
+        /* border: 1px solid black; */
+      }
+      .secondgraph
+      {
+        width:45%;
+        height: 100%;
+        /* border: 1px solid black; */
+      }
+      .thirdgraph
+      {
+        width:45%;
+        height: 100%;
+        /* border: 1px solid black; */
+      }
+      .fourthgraph
+      {
+        width:15%;
+        height: 100%;
+        /* border: 1px solid black; */
+      }
+      .treebody,.lasbody
+      {
+        height: 100%;
+        border: 1px solid black;
+        background-color: rgb(212, 209, 209);
+      }
+      table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    border-bottom: 1px solid rgb(48, 44, 44);
+}
+
+th {
+    text-align: center;    
+}
+#fontSizeWrapper { font-size: 16px; }
+
+#fontSize {
+  width: 100px;
+  font-size: 1em;
+  }
+
+/* ————————————————————–
+  Tree core styles
+*/
+.tree123 { margin: 1em; }
+
+.tree123 input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  }
+
+.tree123 input ~ ul { display: none; }
+
+.tree123 input:checked ~ ul { display: block; }
+
+/* ————————————————————–
+  Tree rows
+*/
+.tree123 li {
+  line-height: 1.2;
+  position: relative;
+  padding: 0 0 1em 1em;
+  }
+
+.tree123 ul li { padding: 1em 0 0 1em; }
+
+.tree123 > li:last-child { padding-bottom: 0; }
+
+/* ————————————————————–
+  Tree labels
+*/
+.tree_label {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  }
+
+label.tree_label { cursor: pointer; }
+
+label.tree_label:hover { color: #666; }
+
+/* ————————————————————–
+  Tree expanded icon
+*/
+label.tree_label:before {
+  background: #000;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0 1em 0 -2em;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  content: '+';
+  text-align: center;
+  line-height: .9em;
+  }
+
+:checked ~ label.tree_label:before { content: '–'; }
+
+/* ————————————————————–
+  Tree branches
+*/
+.tree123 li:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -.5em;
+  display: block;
+  width: 0;
+  border-left: 1px solid #777;
+  content: "";
+  }
+
+.tree_label:after {
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  display: block;
+  height: 0.5em;
+  width: 1em;
+  border-bottom: 1px solid #777;
+  border-left: 1px solid #777;
+  border-radius: 0 0 0 .3em;
+  content: '';
+  }
+
+label.tree_label:after { border-bottom: 0; }
+
+:checked ~ label.tree_label:after {
+  border-radius: 0 .3em 0 0;
+  border-top: 1px solid #777;
+  border-right: 1px solid #777;
+  border-bottom: 0;
+  border-left: 0;
+  bottom: 0;
+  top: 0.5em;
+  height: auto;
+  }
+
+.tree123 li:last-child:before {
+  height: 1em;
+  bottom: auto;
+  }
+
+.tree123 > li:last-child:before { display: none; }
+
+.tree_custom {
+  display: block;
+  background: #eee;
+  padding: 1em;
+  border-radius: 0.3em;
+}

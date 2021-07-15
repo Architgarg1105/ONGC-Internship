@@ -1,367 +1,81 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Home Page</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- <link href="app.css" rel="stylesheet" />    -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-    
-    <style>
-      .maincontent
-      {
-        text-align: center;
-        display:flex;
-        height:42em;
-        width:99%;
-        margin-left: 0.5%;
-        margin-right: 0.5%;
-      }
-      .tree
-      {
-        width:15%;
-        border: 1px solid black;
-      }
-      .graph
-      {
-        width:100%;
-        height:80%;
-        
-        display: flex;
-        border: 1px solid black;
-        /* background-color: lawngreen; */
-      }
-      .centerheader
-      {
-        height:20%;
-        border: 1px solid black;
-        display: flex;
-        /* background-color:red; */
-      }
-      .center
-      {
-        width:70%;
-        border: 1px solid black;
-      }
-      .lasdata
-      {
-        width:15%;
-        border: 1px solid black;
-      }
-      .maincontentheader
-      {
-        height:20%;
-        /* background-color: red; */
-        border: 1px solid black;
-      }
-      .header
-      {
-        text-align: center;
-        border: 2px solid white;
-        background-color: rgb(211, 211, 211);
-        font-weight:bolder;
-      }
-      .depth
-      {
-        width:8%;
-        height: 100%;
-        border: 1px solid black;
-      }
-      .firstgraph
-      {
-        width:45%;
-        height: 100%;
-        /* border: 1px solid black; */
-      }
-      .secondgraph
-      {
-        width:45%;
-        height: 100%;
-        /* border: 1px solid black; */
-      }
-      .thirdgraph
-      {
-        width:45%;
-        height: 100%;
-        /* border: 1px solid black; */
-      }
-      .fourthgraph
-      {
-        width:15%;
-        height: 100%;
-        /* border: 1px solid black; */
-      }
-      .treebody,.lasbody
-      {
-        height: 100%;
-        border: 1px solid black;
-        background-color: rgb(212, 209, 209);
-      }
-      table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-tr {
-    border-bottom: 1px solid rgb(48, 44, 44);
-}
-
-th {
-    text-align: center;    
-}
-#fontSizeWrapper { font-size: 16px; }
-
-#fontSize {
-  width: 100px;
-  font-size: 1em;
-  }
-
-/* ————————————————————–
-  Tree core styles
-*/
-.tree123 { margin: 1em; }
-
-.tree123 input {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
-  }
-
-.tree123 input ~ ul { display: none; }
-
-.tree123 input:checked ~ ul { display: block; }
-
-/* ————————————————————–
-  Tree rows
-*/
-.tree123 li {
-  line-height: 1.2;
-  position: relative;
-  padding: 0 0 1em 1em;
-  }
-
-.tree123 ul li { padding: 1em 0 0 1em; }
-
-.tree123 > li:last-child { padding-bottom: 0; }
-
-/* ————————————————————–
-  Tree labels
-*/
-.tree_label {
-  position: relative;
-  display: inline-block;
-  background: #fff;
-  }
-
-label.tree_label { cursor: pointer; }
-
-label.tree_label:hover { color: #666; }
-
-/* ————————————————————–
-  Tree expanded icon
-*/
-label.tree_label:before {
-  background: #000;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  float: left;
-  margin: 0 1em 0 -2em;
-  width: 1em;
-  height: 1em;
-  border-radius: 1em;
-  content: '+';
-  text-align: center;
-  line-height: .9em;
-  }
-
-:checked ~ label.tree_label:before { content: '–'; }
-
-/* ————————————————————–
-  Tree branches
-*/
-.tree123 li:before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: -.5em;
-  display: block;
-  width: 0;
-  border-left: 1px solid #777;
-  content: "";
-  }
-
-.tree_label:after {
-  position: absolute;
-  top: 0;
-  left: -1.5em;
-  display: block;
-  height: 0.5em;
-  width: 1em;
-  border-bottom: 1px solid #777;
-  border-left: 1px solid #777;
-  border-radius: 0 0 0 .3em;
-  content: '';
-  }
-
-label.tree_label:after { border-bottom: 0; }
-
-:checked ~ label.tree_label:after {
-  border-radius: 0 .3em 0 0;
-  border-top: 1px solid #777;
-  border-right: 1px solid #777;
-  border-bottom: 0;
-  border-left: 0;
-  bottom: 0;
-  top: 0.5em;
-  height: auto;
-  }
-
-.tree123 li:last-child:before {
-  height: 1em;
-  bottom: auto;
-  }
-
-.tree123 > li:last-child:before { display: none; }
-
-.tree_custom {
-  display: block;
-  background: #eee;
-  padding: 1em;
-  border-radius: 0.3em;
-}
-    </style>
+  <title>Home Page</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-  <div class="header"><h3 style="font-weight:bold;">LOG DATA VIEWER</h3></div>
-    <!-- <header>
-        <h3>Log Data Viewer</h3>
-    </header> -->
-    <nav class="navbar navbar-inverse" role="navigation">
-      <div class="container-fluid">
-
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header text-left">
-           
-              <!-- FILL YOUR CODE FOR BRAND AND TOGGLE (ICON BAR) FOR RESPONSIVE NAVIGATION BAR -->
-              <button type="button" id="btn-id" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <!-- <a class="navbar-brand" href="#">MyBrand</a> -->
-          </div>
-
-          <!-- Collect the nav links, forms, and other contents for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <ul class="nav navbar-nav">
-                  <li><a style="cursor: pointer;" data-toggle="modal" data-target="#exampleModal">Upload</a>
-                 </li>
-                 
-                  <li><a href="#">Download</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Help</a></li>
-              </ul>
-          </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+  <div class="header">
+    <h3 style="font-weight:bold;">LOG DATA VIEWER</h3>
+  </div>
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header text-left">
+        <button type="button" id="btn-id" class="navbar-toggle collapsed " data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li><a style="cursor: pointer;" data-toggle="modal" data-target="#exampleModal">Upload</a>
+          </li>
+          <li><a href="#">Download</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
- 
-                  
+
   <div class="maincontent">
     <div class="tree">
-      <!-- <div class="maincontentheader">Main Details</div> -->
       <div class="treebody">
-        <!-- <div id="fontSizeWrapper">
-          <label for="fontSize">Font size</label>
-          <input type="range" value="1" id="fontSize" step="0.5" min="0.5" max="5" />
-        </div> -->
         <ul class="tree123">
-          
-            <input type="checkbox" checked="checked" id="c1" />
-            <label class="tree_label" for="c1">Curves</label>
-            <ul>
-                <input type="checkbox" checked="checked" id="c2" />
-                <!-- <label for="c2" class="tree_label">NKK-7</label> -->
-                  <!-- <li><span class="tree_label">Curves</span></li> -->
-                  <!-- <li><span class="tree_label">Level 2</span></li> -->
-                    <li><span class="tree_label">CNCF</span></li>
-                    <li><span class="tree_label">GR</span></li>
-                    <li><span class="tree_label">M2R1</span></li>
-                    <li><span class="tree_label">M2R6</span></li>
-                    <li><span class="tree_label">M2RX</span></li>
-                    <li><span class="tree_label">ZDEN</span></li>
-              <!-- <li>
-                <input type="checkbox" id="c3" />
-                <label for="c3" class="tree_label">Looong level 1 <br/>label text <br/>with line-breaks</label>
-                <ul>
-                  <li><span class="tree_label">Level 2</span></li>
-                  <li>
-                    <input type="checkbox" id="c4" />
-                    <label for="c4" class="tree_label"><span class="tree_custom">Specified tree item view</span></label>
-                    <ul>
-                      <li><span class="tree_label">Level 3</span></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li> -->
-            </ul>
-          
-          
-          
-          <!-- <li>
-            <input type="checkbox" id="c5" />
-            <label class="tree_label" for="c5">Level 0</label>
-            <ul>
-              <li>
-                <input type="checkbox" id="c6" />
-                <label for="c6" class="tree_label">Level 1</label>
-                <ul>
-                  <li><span class="tree_label">Level 2</span></li>
-                </ul>
-              </li>
-              <li>
-                <input type="checkbox" id="c7" />
-                <label for="c7" class="tree_label">Level 1</label>
-                <ul>
-                  <li><span class="tree_label">Level 2</span></li>
-                  <li>
-                    <input type="checkbox" id="c8" />
-                    <label for="c8" class="tree_label">Level 2</label>
-                    <ul>
-                      <li><span class="tree_label">Level 3</span></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li> -->
+          <input type="checkbox" checked="checked" id="c1" />
+          <label class="tree_label" for="c1">Curves</label>
+          <ul>
+            <input type="checkbox" checked="checked" id="c2" />
+            <li><span class="tree_label">CNCF</span></li>
+            <li><span class="tree_label">GR</span></li>
+            <li><span class="tree_label">M2R1</span></li>
+            <li><span class="tree_label">M2R6</span></li>
+            <li><span class="tree_label">M2RX</span></li>
+            <li><span class="tree_label">ZDEN</span></li>
+          </ul>
         </ul>
       </div>
     </div>
     <div class="center">
       <div class="centerheader">
         <!-- <div class="depth">depth</div> -->
-        <div style="font-weight:bold;" class="firstgraph"><h4 style="font-weight: bold;">First Graph</h4>
-        
-        <p style="color:red;">GR: <span style="color:black">0-120</span></p>
-        <p style="color:green">SP: <span style="color:black">20-120</span></p>
+        <div style="font-weight:bold;" class="firstgraph">
+          <h4 style="font-weight: bold;">First Graph</h4>
+          <p style="color:red;">GR: <span style="color:black">0-120</span></p>
+          <p style="color:green">SP: <span style="color:black">20-120</span></p>
+        </div>
+        <div style="font-weight:bold;" class="secondgraph">
+          <h4 style="font-weight: bold;">Second Graph</h4>
+          <p style="color:red">GR: <span style="color:black">0-120</span></p>
+          <p style="color:green">SP: <span style="color:black">20-120</span></p>
+        </div>
+        <div style="font-weight:bold;" class="thirdgraph">
+          <h4 style="font-weight: bold;">Third Graph</h4>
+          <p style="color:red">GR: <span style="color:black">0-120</span></p>
+          <p style="color:green">SP: <span style="color:black">20-120</span></p>
+        </div>
       </div>
-        <div style="font-weight:bold;" class="secondgraph"><h4 style="font-weight: bold;">Second Graph</h4>
-          
-        <p style="color:red">GR: <span style="color:black">0-120</span></p>
-        <p style="color:green">SP: <span style="color:black">20-120</span></p>
-      </div>
-        <div style="font-weight:bold;" class="thirdgraph"><h4 style="font-weight: bold;">Third Graph</h4>
-         
-        <p style="color:red">GR: <span style="color:black">0-120</span></p>
-        <p style="color:green">SP: <span style="color:black">20-120</span></p>
-      </div>
-        <!-- <div class="fourthgraph">fourthgraph</div> -->
-      </div>
-      <div  class="graph">
+      <div class="graph">
         <!-- <div class="depth">depth</div>
         <div id="container1" class="firstgraph"></div>
         <div id="container2" class="secondgraph">secondgraph</div>
@@ -373,150 +87,158 @@ label.tree_label:after { border-bottom: 0; }
       </div>
     </div>
     <div class="lasdata">
-      <!-- <div class="maincontentheader">Las Data</div> -->
-     
       <div class="lasbody">
         <h3 style="font-weight: bold;">Well Information</h3>
         <table>
           <thead>
-              <tr>
-                  <th>Unit</th>
-                  <th>Data</th>
-              </tr>
+            <tr>
+              <th>Unit</th>
+              <th>Data</th>
+            </tr>
           </thead>
           <tbody>
-              <tr>
-                  <td>STRT.FT</td>
-                  <td>6.000</td>
-              </tr>
-              <tr>
-                <td>STOP.FT</td>
-                <td>3533.5000</td>
+            <tr>
+              <td>STRT.FT</td>
+              <td>6.000</td>
+            </tr>
+            <tr>
+              <td>STOP.FT</td>
+              <td>3533.5000</td>
             </tr>
             <tr>
               <td>STRT.F</td>
               <td>9.5000</td>
-          </tr>
-          <tr>
-            <td>STRT.F</td>
-            <td>9.5000</td>
-        </tr>
-        <tr>
-          <td>STRT.F</td>
-          <td>9.5000</td>
-      </tr>
-      <tr>
-        <td>STRT.F</td>
-        <td>9.5000</td>
-    </tr>
-    <tr>
-      <td>STRT.F</td>
-      <td>9.5000</td>
-  </tr>
-  <tr>
-    <td>STRT.F</td>
-    <td>9.5000</td>
-</tr>
-<tr>
-  <td>STRT.F</td>
-  <td>9.5000</td>
-</tr>
-<tr>
-<td>STRT.F</td>
-<td>9.5000</td>
-</tr>
-<tr>
-  <td>STRT.F</td>
-  <td>9.5000</td>
-</tr>
-<tr>
-<td>STRT.F</td>
-<td>9.5000</td>
-</tr>
-<tr>
-  <td>STRT.F</td>
-  <td>9.5000</td>
-</tr>
-<tr>
-<td>STRT.F</td>
-<td>9.5000</td>
-</tr>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
+            <tr>
+              <td>STRT.F</td>
+              <td>9.5000</td>
+            </tr>
           </tbody>
-      </table>
+        </table>
       </div>
     </div>
   </div>
   <!-- Modal -->
-  <div  class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div style="text-align: center;background-color: rgb(243, 243, 243);" class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h3 style="text-align: center;font-weight: bold;" class="modal-title" id="exampleModalLabel">Upload LAS File</h3>
-          
+          <h3 style="text-align: center;font-weight: bold;" class="modal-title" id="exampleModalLabel">Upload LAS File
+          </h3>
+
         </div>
-        <div style="text-align: center;background-color: rgb(211, 211, 211);" class="modal-body">
-          <form action= "/uploader" method="post" Enctype="multipart/form-data">
+        <div   style="text-align: center;background-color: rgb(211, 211, 211);" class="modal-body">
+          <form method="post" id="lasfile" Enctype="multipart/form-data">
             <b>
-            <input style="margin:auto;border:3px solid black;cursor: pointer;" type="file" name="file" multiple><br><br>
-            <input style="background-color: rgb(255, 255, 255);" type="submit" value="upload"></b>
+              <input  style="margin:auto;border:3px solid black;cursor: pointer;" type="file" name="file"
+                multiple><br><br>
+              <input style="background-color: rgb(255, 255, 255);" onclick="lasfilefunc()" type="submit" value="upload" ></b>
           </form>
         </div>
-        <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div> -->
+
       </div>
     </div>
   </div>
   <script src="https://code.highcharts.com/stock/highstock.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
-    <!-- <script type="text/javascript" src="action.js"> </script>   -->
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="https://code.highcharts.com/stock/6.0.3/highstock.js"></script>
-<script type="text/javascript" src="{{ url_for('static', filename = 'highcharts.js') }}"></script>
-<!-- <script src="highcharts1.js"></script> -->
-<script>
-  function isNumber(n) {
-  return !isNaN(parseFloat(n)) && isFinite(n);
-}
-
-function setFontSize(el) {
-    var fontSize = el.val();
-    
-    if ( isNumber(fontSize) && fontSize >= 0.5 ) {
-      $('body').css({ fontSize: fontSize + 'em' });
-    } else if ( fontSize ) {
-      el.val('1');
-      $('body').css({ fontSize: '1em' });  
+  <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/stock/modules/accessibility.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.highcharts.com/stock/6.0.3/highstock.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'highcharts.js') }}"></script>
+  <!-- <script src="highcharts1.js"></script> -->
+  <script>
+    function isNumber(n) {
+      return !isNaN(parseFloat(n)) && isFinite(n);
     }
-}
 
-$(function() {
-  
-  $('#fontSize')
-    .bind('change', function(){ setFontSize($(this)); })
-    .bind('keyup', function(e){
-      if (e.keyCode == 27) {
-        $(this).val('1');
-        $('body').css({ fontSize: '1em' });  
-      } else {
-        setFontSize($(this));
+    function setFontSize(el) {
+      var fontSize = el.val();
+
+      if (isNumber(fontSize) && fontSize >= 0.5) {
+        $('body').css({
+          fontSize: fontSize + 'em'
+        });
+      } else if (fontSize) {
+        el.val('1');
+        $('body').css({
+          fontSize: '1em'
+        });
       }
+    }
+
+    $(function () {
+
+      $('#fontSize')
+        .bind('change', function () {
+          setFontSize($(this));
+        })
+        .bind('keyup', function (e) {
+          if (e.keyCode == 27) {
+            $(this).val('1');
+            $('body').css({
+              fontSize: '1em'
+            });
+          } else {
+            setFontSize($(this));
+          }
+        });
+
+      $(window)
+        .bind('keyup', function (e) {
+          if (e.keyCode == 27) {
+            $('#fontSize').val('1');
+            $('body').css({
+              fontSize: '1em'
+            });
+          }
+        });
+
     });
-  
-  $(window)
-    .bind('keyup', function(e){
-      if (e.keyCode == 27) {
-        $('#fontSize').val('1');
-        $('body').css({ fontSize: '1em' });  
-      }
-    });
-  
-});
-</script>
+  </script>
 </body>
+
 </html>

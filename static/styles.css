@@ -153,25 +153,31 @@
       }
       .firstgraph
       {
-        width:45%;
+        width:20%;
         height: 100%;
         /* border: 1px solid black; */
       }
       .secondgraph
       {
-        width:45%;
+        width:20%;
         height: 100%;
         /* border: 1px solid black; */
       }
       .thirdgraph
       {
-        width:45%;
+        width:20%;
         height: 100%;
         /* border: 1px solid black; */
       }
       .fourthgraph
       {
-        width:15%;
+        width:20%;
+        height: 100%;
+        /* border: 1px solid black; */
+      }
+      .fifthgraph
+      {
+        width:20%;
         height: 100%;
         /* border: 1px solid black; */
       }
@@ -188,6 +194,7 @@
 
 tr {
     border-bottom: 1px solid rgb(48, 44, 44);
+    padding-top: 15px;
 }
 
 th {

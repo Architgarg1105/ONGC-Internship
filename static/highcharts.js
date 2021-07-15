@@ -92,12 +92,12 @@ function _display(obj)
             // name: 'GR',
             showInLegend:false,
             yAxis: 0,
-            data: obj.data.cnpor
+            data: obj.data.cali
         }, {
             // name: 'SP',
             showInLegend:false,
             yAxis: 1,
-            data: obj.data.dcal,
+            data: obj.data.cond,
     
         }]
     });
@@ -168,12 +168,12 @@ function _display(obj)
             // name: 'GR',
             showInLegend:false,
             yAxis: 0,
-            data: obj.data.dpor
+            data: obj.data.dfar
         }, {
             // name: 'SP',
             showInLegend:false,
             yAxis: 1,
-            data: obj.data.dt,
+            data: obj.data.dnear,
     
         }]
     });
@@ -245,14 +245,15 @@ function _display(obj)
             // name: 'GR',
             showInLegend:false,
             yAxis: 0,
-            data: obj.data.gr
+            data: obj.data.gamn
         }, {
             // name: 'SP',
             showInLegend:false,
             yAxis: 1,
-            data: obj.data.itt,
+            data: obj.data.neut,
     
         }]
     
     });
+    document.getElementById("myForm").style.display = "none";
 }

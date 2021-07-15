@@ -8,10 +8,11 @@ app = Flask(__name__,  template_folder='')
 CORS(app)
 @app.route('/')
 def upload():
-  return render_template("homepage.html")
-@app.route('/test',methods=['POST'])
-def test():
-  return jsonify('hello world')
+  return render_template("home2.html")
+  
+# @app.route('/test',methods=['POST'])
+# def test():
+#   return jsonify('hello world')
 
 @app.route('/uploader', methods=['POST'])
 def upload_file():
@@ -30,7 +31,7 @@ def upload_file():
         log_in_json=log.get_json()
 
         # or get only assci/data
-        data = log.data
+        # data = log.data
 
         return make_response(log_in_json,200)
 

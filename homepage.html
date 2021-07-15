@@ -6,10 +6,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  <script src="
+https://code.jquery.com/jquery-3.1.1.min.js
+"></script>
+
+    <script src="
+https://code.highcharts.com/stock/6.0.3/highstock.js
+"></script>
+    <script src="
+https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js
+"></script>
   <link rel="stylesheet" type="text/css" href="styles.css">
+
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
   
       
 
@@ -19,7 +39,23 @@
   <div class="header">
     <h3 style="font-weight:bold;">LOG DATA VIEWER</h3>
   </div>
-  <nav class="navbar navbar-inverse" role="navigation">
+  <ul class="list">
+    <li class="items"><button class="open-button" onclick="openForm()">Upload</button></li>
+    <li class="items"><button class="open-button" onClick="window.location.reload();">Refresh</button></li>
+    <li class="items"><a href="#news">About</a></li>
+    <li class="items"><a href="#about">Help</a></li>
+  </ul>
+  <div class="form-popup" id="myForm">
+    <form method="post" id="lasfile" class="form-container" Enctype="multipart/form-data">
+      <b>
+        <input  style="margin:auto;border:3px solid black;cursor: pointer;" type="file" name="file" multiple><br><br>
+        <button type="button" onclick="lasfilefunc()" class="btn btn-default" data-dismiss="modal">Upload</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </b>
+    </form>
+  </div>
+  
+  <!-- <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header text-left">
         <button type="button" id="btn-id" class="navbar-toggle collapsed " data-toggle="collapse"
@@ -39,8 +75,14 @@
         </ul>
       </div>
     </div>
-  </nav>
-
+  </nav> -->
+  <!-- <form method="post" id="lasfile" Enctype="multipart/form-data">
+    <b>
+      <input  style="margin:auto;border:3px solid black;cursor: pointer;" type="file" name="file" multiple><br><br>
+      <input style="background-color: rgb(255, 255, 255);" onclick="lasfilefunc()" type="submit" value="upload" >
+      <button type="button" onclick="lasfilefunc()" class="btn btn-default" data-dismiss="modal">Upload</button>
+    </b>
+  </form> -->
   <div class="maincontent">
     <div class="tree">
       <div class="treebody">
@@ -162,7 +204,7 @@
     </div>
   </div>
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div style="text-align: center;background-color: rgb(243, 243, 243);" class="modal-content">
         <div class="modal-header">
@@ -175,11 +217,11 @@
           <form method="post" id="lasfile" Enctype="multipart/form-data">
             <b>
               <input  style="margin:auto;border:3px solid black;cursor: pointer;" type="file" name="file" multiple><br><br>
-              <!-- <input style="background-color: rgb(255, 255, 255);" onclick="lasfilefunc()" type="submit" value="upload" > -->
+              <input style="background-color: rgb(255, 255, 255);" onclick="lasfilefunc()" type="submit" value="upload" >
               <button type="button" onclick="lasfilefunc()" class="btn btn-default" data-dismiss="modal">Upload</button>
             </b>
           </form>
-        </div>
+        </div> -->
 
       </div>
     </div>

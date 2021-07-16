@@ -1,3 +1,19 @@
+
+.red 
+{
+  font-weight:bold;
+  color:red;
+}
+.green
+{
+  font-weight:bold;
+  color:green;
+}
+#black
+{
+  color:black;
+}
+
 .open-button {
   background-color: #333;
   color: white;
@@ -104,7 +120,7 @@
       .tree
       {
         width:15%;
-        border: 1px solid black;
+        /* border: 1px solid black; */
       }
       .graph
       {
@@ -118,14 +134,15 @@
       .centerheader
       {
         height:20%;
-        border: 1px solid black;
+        /* border: 1px solid black; */
         display: flex;
         /* background-color:red; */
       }
       .center
       {
         width:70%;
-        border: 1px solid black;
+        display:none;
+        /* border: 1px solid black; */
       }
       .lasdata
       {
@@ -153,31 +170,31 @@
       }
       .firstgraph
       {
-        width:20%;
+        width:19.9%;
         height: 100%;
-        /* border: 1px solid black; */
+        /* border-right: 1px solid black; */
       }
       .secondgraph
       {
-        width:20%;
+        width:19.9%;
         height: 100%;
-        /* border: 1px solid black; */
+        /* border-right: 1px solid black; */
       }
       .thirdgraph
       {
-        width:20%;
+        width:19.9%;
         height: 100%;
-        /* border: 1px solid black; */
+        /* border-right: 1px solid black; */
       }
       .fourthgraph
       {
-        width:20%;
+        width:19.9%;
         height: 100%;
-        /* border: 1px solid black; */
+        /* border-right: 1px solid black; */
       }
       .fifthgraph
       {
-        width:20%;
+        width:19.9%;
         height: 100%;
         /* border: 1px solid black; */
       }

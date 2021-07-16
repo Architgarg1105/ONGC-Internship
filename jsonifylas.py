@@ -8,7 +8,7 @@ app = Flask(__name__,  template_folder='')
 CORS(app)
 @app.route('/')
 def home():
-  return render_template("homepage.html")
+  return render_template("home2.html")
 
 # @app.route('/test',methods=['POST'])
 # def test():

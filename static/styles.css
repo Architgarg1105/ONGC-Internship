@@ -148,6 +148,9 @@
       {
         width:15%;
         border: 1px solid black;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: rgb(212, 209, 209);
       }
       .maincontentheader
       {
@@ -178,6 +181,8 @@
       {
         width:19.9%;
         height: 100%;
+        /* overflow-x: hidden;
+        overflow-y: auto; */
         /* border-right: 1px solid black; */
       }
       .thirdgraph

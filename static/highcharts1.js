@@ -12,8 +12,6 @@ var h11;
     var count=0;
 function lasfilefunc()
 {
-    
-    
     var numberList = document.getElementById("numberList");
     var tablebody = document.getElementById("tablebody");
     var firstgraph = document.getElementById("firstgraph");
@@ -71,6 +69,7 @@ function traverse(o) {
             var span2 = document.createElement("span");
             var spanvalue = document.createTextNode(midspace);
             span2.appendChild(spanvalue);
+            var brtag = document.createElement("br");
             console.log(ptag1);
             if(i=="dept")
             {
@@ -81,7 +80,7 @@ function traverse(o) {
                 firstgraph.appendChild(ptag1);
                 firstgraph.appendChild(span2);
                 firstgraph.appendChild(span1);
-              
+                firstgraph.appendChild(brtag);
                 $("#firstgraph p, #firstgraph span").css('display', 'inline-block');
                 $("#firstgraph p").css({'color': 'blue','font-weight': 'bold'});
                 highc1(arraydata);
@@ -93,6 +92,7 @@ function traverse(o) {
                 firstgraph.appendChild(ptag1);
                 firstgraph.appendChild(span2);
                 firstgraph.appendChild(span1);
+                firstgraph.appendChild(brtag);
                 $("#firstgraph p, #firstgraph span").css('display', 'inline-block');
                 $("#firstgraph span").css({'font-weight': 'bold','color': 'black'});
                 $("#firstgraph ").css({'color': 'red','font-weight': 'bold'});
@@ -104,6 +104,7 @@ function traverse(o) {
                 secondgraph.appendChild(ptag1);
                 secondgraph.appendChild(span2);
                 secondgraph.appendChild(span1);
+                firstgraph.appendChild(brtag);
                 $("#secondgraph p, #secondgraph span").css('display', 'inline-block');
                 $("#secondgraph p").css({'color': 'blue','font-weight': 'bold'});
                 highc3(arraydata);
@@ -114,6 +115,7 @@ function traverse(o) {
                 secondgraph.appendChild(ptag1);
                 secondgraph.appendChild(span2);
                 secondgraph.appendChild(span1);
+                firstgraph.appendChild(brtag);
                 $("#secondgraph p, #secondgraph span").css('display', 'inline-block');
                 $("#secondgraph span").css({'font-weight': 'bold','color': 'black'});
                 $("#secondgraph ").css({'color': 'red','font-weight': 'bold'});
@@ -125,6 +127,7 @@ function traverse(o) {
                 thirdgraph.appendChild(ptag1);
                 thirdgraph.appendChild(span2);
                 thirdgraph.appendChild(span1);
+                firstgraph.appendChild(brtag);
                 $("#thirdgraph p, #thirdgraph span").css('display', 'inline-block');
                 $("#thirdgraph p").css({'color': 'blue','font-weight': 'bold'});
                 highc5(arraydata);
@@ -135,6 +138,7 @@ function traverse(o) {
                 thirdgraph.appendChild(ptag1);
                 thirdgraph.appendChild(span2);
                 thirdgraph.appendChild(span1);
+                firstgraph.appendChild(brtag);
                 $("#thirdgraph p, #thirdgraph span").css('display', 'inline-block');
                 $("#thirdgraph span").css({'font-weight': 'bold','color': 'black'});
                 $("#thirdgraph ").css({'color': 'red','font-weight': 'bold'});
@@ -146,6 +150,7 @@ function traverse(o) {
                 fourthgraph.appendChild(ptag1);
                 fourthgraph.appendChild(span2);
                 fourthgraph.appendChild(span1);
+                firstgraph.appendChild(brtag);
                 $("#fourthgraph p, #fourthgraph span").css('display', 'inline-block');
                 $("#fourthgraph p").css({'color': 'blue','font-weight': 'bold'});
                 highc7(arraydata);
@@ -156,6 +161,7 @@ function traverse(o) {
                 fourthgraph.appendChild(ptag1);
                 fourthgraph.appendChild(span2);
                 fourthgraph.appendChild(span1);
+                firstgraph.appendChild(brtag);
                 $("#fourthgraph p, #fourthgraph span").css('display', 'inline-block');
                 $("#fourthgraph span").css({'font-weight': 'bold','color': 'black'});
                 $("#fourthgraph ").css({'color': 'red','font-weight': 'bold'});
@@ -167,6 +173,7 @@ function traverse(o) {
                 fifthgraph.appendChild(ptag1);
                 fifthgraph.appendChild(span2);
                 fifthgraph.appendChild(span1);
+                firstgraph.appendChild(brtag);
                 $("#fifthgraph p, #fifthgraph span").css('display', 'inline-block');
                 $("#fifthgraph p").css({'color': 'blue','font-weight': 'bold'});
                 highc9(arraydata);
@@ -177,6 +184,7 @@ function traverse(o) {
                 fifthgraph.appendChild(ptag1);
                 fifthgraph.appendChild(span2);
                 fifthgraph.appendChild(span1);
+                firstgraph.appendChild(brtag);
                 $("#fifthgraph p, #fifthgraph span").css('display', 'inline-block');
                 $("#fifthgraph span").css({'font-weight': 'bold','color': 'black'});
                 $("#fifthgraph ").css({'color': 'red','font-weight': 'bold'});

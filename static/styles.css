@@ -1,4 +1,13 @@
-
+.upperheading
+{
+   height: 25%;margin-top: 5%; margin-bottom: 10%;
+   display: none;
+}
+.lowerheading
+{
+   height: 25%;
+   display: none;
+}
 .red 
 {
   font-weight:bold;
@@ -120,6 +129,9 @@
       .tree
       {
         width:15%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background-color: rgb(212, 209, 209);
         /* border: 1px solid black; */
       }
       .graph

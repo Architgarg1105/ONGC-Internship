@@ -1,4 +1,3 @@
-// var filevalue=getElementById("lasfile").value;
 var h11;
     var h12;
     var h21;
@@ -10,16 +9,34 @@ var h11;
     var h51;
     var h52;
     var count=0;
+    var seriesshow11=0;
+    var seriesshow12=0;
+    var seriesshow21=0;
+    var seriesshow22=0;
+    var seriesshow31=0;
+    var seriesshow32=0;
+    var seriesshow41=0;
+    var seriesshow42=0;
+    var seriesshow51=0;
+    var seriesshow52=0;
+    var emptylist=[];
+    var obj;
 function lasfilefunc()
 {
+    
     var numberList = document.getElementById("numberList");
     var tablebody = document.getElementById("tablebody");
-    var firstgraph = document.getElementById("firstgraph");
-    var secondgraph = document.getElementById("secondgraph");
-    var thirdgraph = document.getElementById("thirdgraph");
-    var fourthgraph = document.getElementById("fourthgraph");
-    var fifthgraph = document.getElementById("fifthgraph");
-    var lasdata = new FormData($('#lasfile')[0]);
+    var firstfirst = document.getElementById("firstfirst");
+    var firstsecond = document.getElementById("firstsecond");
+    var secondfirst = document.getElementById("secondfirst");
+    var secondsecond = document.getElementById("secondsecond");
+    var thirdfirst = document.getElementById("thirdfirst");
+    var thirdsecond = document.getElementById("thirdsecond");
+    var fourthfirst = document.getElementById("fourthfirst");
+    var fourthsecond = document.getElementById("fourthsecond");
+    var fifthfirst = document.getElementById("fifthfirst");
+    var fifthsecond = document.getElementById("fifthsecond");
+    lasdata = new FormData($('#lasfile')[0]);
     console.log(lasdata);
     console.log("hi");
     $.ajax({
@@ -35,7 +52,7 @@ function lasfilefunc()
         {
             console.log("successful");
             // console.log(data);
-            var obj=JSON.parse(data);
+            obj=JSON.parse(data);
             // console.log(obj.data);
             traverse(obj.data);
             traverse1(obj.well);
@@ -77,117 +94,116 @@ function traverse(o) {
             }
             if(count==0)
             {
-                firstgraph.appendChild(ptag1);
-                firstgraph.appendChild(span2);
-                firstgraph.appendChild(span1);
-                firstgraph.appendChild(brtag);
-                $("#firstgraph p, #firstgraph span").css('display', 'inline-block');
-                $("#firstgraph p").css({'color': 'blue','font-weight': 'bold'});
+                firstfirst.appendChild(ptag1);
+                firstfirst.appendChild(span2);
+                firstfirst.appendChild(span1);
+                firstfirst.appendChild(brtag);
+                $("#firstfirst p, #firstfirst span").css('display', 'inline-block');
+                $("#firstfirst p").css({'color': 'blue','font-weight': 'bold'});
                 highc1(arraydata);
                 count++;
             }
             else if(count==1)
             {
-           
-                firstgraph.appendChild(ptag1);
-                firstgraph.appendChild(span2);
-                firstgraph.appendChild(span1);
-                firstgraph.appendChild(brtag);
-                $("#firstgraph p, #firstgraph span").css('display', 'inline-block');
-                $("#firstgraph span").css({'font-weight': 'bold','color': 'black'});
-                $("#firstgraph ").css({'color': 'red','font-weight': 'bold'});
+                firstsecond.appendChild(ptag1);
+                firstsecond.appendChild(span2);
+                firstsecond.appendChild(span1);
+                firstsecond.appendChild(brtag);
+                $("#firstsecond p, #firstsecond span").css('display', 'inline-block');
+                $("#firstsecond span").css({'font-weight': 'bold','color': 'black'});
+                $("#firstsecond ").css({'color': 'red','font-weight': 'bold'});
                 highc2(arraydata);
                 count++;
             }
             else if(count==2)
             {
-                secondgraph.appendChild(ptag1);
-                secondgraph.appendChild(span2);
-                secondgraph.appendChild(span1);
+                secondfirst.appendChild(ptag1);
+                secondfirst.appendChild(span2);
+                secondfirst.appendChild(span1);
                 firstgraph.appendChild(brtag);
-                $("#secondgraph p, #secondgraph span").css('display', 'inline-block');
-                $("#secondgraph p").css({'color': 'blue','font-weight': 'bold'});
+                $("#secondfirst p, #secondfirst span").css('display', 'inline-block');
+                $("#secondfirst p").css({'color': 'blue','font-weight': 'bold'});
                 highc3(arraydata);
                 count++;
             }
             else if(count==3)
             {
-                secondgraph.appendChild(ptag1);
-                secondgraph.appendChild(span2);
-                secondgraph.appendChild(span1);
+                secondsecond.appendChild(ptag1);
+                secondsecond.appendChild(span2);
+                secondsecond.appendChild(span1);
                 firstgraph.appendChild(brtag);
-                $("#secondgraph p, #secondgraph span").css('display', 'inline-block');
-                $("#secondgraph span").css({'font-weight': 'bold','color': 'black'});
-                $("#secondgraph ").css({'color': 'red','font-weight': 'bold'});
+                $("#secondsecond p, #secondsecond span").css('display', 'inline-block');
+                $("#secondsecond span").css({'font-weight': 'bold','color': 'black'});
+                $("#secondsecond ").css({'color': 'red','font-weight': 'bold'});
                 highc4(arraydata);
                 count++;
             }
             else if(count==4)
             {
-                thirdgraph.appendChild(ptag1);
-                thirdgraph.appendChild(span2);
-                thirdgraph.appendChild(span1);
-                firstgraph.appendChild(brtag);
-                $("#thirdgraph p, #thirdgraph span").css('display', 'inline-block');
-                $("#thirdgraph p").css({'color': 'blue','font-weight': 'bold'});
+                thirdfirst.appendChild(ptag1);
+                thirdfirst.appendChild(span2);
+                thirdfirst.appendChild(span1);
+                thirdfirst.appendChild(brtag);
+                $("#thirdfirst p, #thirdfirst span").css('display', 'inline-block');
+                $("#thirdfirst p").css({'color': 'blue','font-weight': 'bold'});
                 highc5(arraydata);
                 count++;
             }
             else if(count==5)
             {
-                thirdgraph.appendChild(ptag1);
-                thirdgraph.appendChild(span2);
-                thirdgraph.appendChild(span1);
-                firstgraph.appendChild(brtag);
-                $("#thirdgraph p, #thirdgraph span").css('display', 'inline-block');
-                $("#thirdgraph span").css({'font-weight': 'bold','color': 'black'});
-                $("#thirdgraph ").css({'color': 'red','font-weight': 'bold'});
+                thirdsecond.appendChild(ptag1);
+                thirdsecond.appendChild(span2);
+                thirdsecond.appendChild(span1);
+                thirdsecond.appendChild(brtag);
+                $("#thirdsecond p, #thirdsecond span").css('display', 'inline-block');
+                $("#thirdsecond span").css({'font-weight': 'bold','color': 'black'});
+                $("#thirdsecond ").css({'color': 'red','font-weight': 'bold'});
                 highc6(arraydata);
                 count++;
             }
             else if(count==6)
             {
-                fourthgraph.appendChild(ptag1);
-                fourthgraph.appendChild(span2);
-                fourthgraph.appendChild(span1);
-                firstgraph.appendChild(brtag);
-                $("#fourthgraph p, #fourthgraph span").css('display', 'inline-block');
-                $("#fourthgraph p").css({'color': 'blue','font-weight': 'bold'});
+                fourthfirst.appendChild(ptag1);
+                fourthfirst.appendChild(span2);
+                fourthfirst.appendChild(span1);
+                fourthfirst.appendChild(brtag);
+                $("#fourthfirst p, #fourthfirst span").css('display', 'inline-block');
+                $("#fourthfirst p").css({'color': 'blue','font-weight': 'bold'});
                 highc7(arraydata);
                 count++;
             }
             else if(count==7)
             {
-                fourthgraph.appendChild(ptag1);
-                fourthgraph.appendChild(span2);
-                fourthgraph.appendChild(span1);
-                firstgraph.appendChild(brtag);
-                $("#fourthgraph p, #fourthgraph span").css('display', 'inline-block');
-                $("#fourthgraph span").css({'font-weight': 'bold','color': 'black'});
-                $("#fourthgraph ").css({'color': 'red','font-weight': 'bold'});
+                fourthsecond.appendChild(ptag1);
+                fourthsecond.appendChild(span2);
+                fourthsecond.appendChild(span1);
+                fourthsecond.appendChild(brtag);
+                $("#fourthsecond p, #fourthsecond span").css('display', 'inline-block');
+                $("#fourthsecond span").css({'font-weight': 'bold','color': 'black'});
+                $("#fourthsecond ").css({'color': 'red','font-weight': 'bold'});
                 highc8(arraydata);
                 count++;
             }
             else if(count==8)
             {
-                fifthgraph.appendChild(ptag1);
-                fifthgraph.appendChild(span2);
-                fifthgraph.appendChild(span1);
-                firstgraph.appendChild(brtag);
-                $("#fifthgraph p, #fifthgraph span").css('display', 'inline-block');
-                $("#fifthgraph p").css({'color': 'blue','font-weight': 'bold'});
+                fifthfirst.appendChild(ptag1);
+                fifthfirst.appendChild(span2);
+                fifthfirst.appendChild(span1);
+                fifthfirst.appendChild(brtag);
+                $("#fifthfirst p, #fifthfirst span").css('display', 'inline-block');
+                $("#fifthfirst p").css({'color': 'blue','font-weight': 'bold'});
                 highc9(arraydata);
                 count++;
             }
             else if(count==9)
             {
-                fifthgraph.appendChild(ptag1);
-                fifthgraph.appendChild(span2);
-                fifthgraph.appendChild(span1);
-                firstgraph.appendChild(brtag);
-                $("#fifthgraph p, #fifthgraph span").css('display', 'inline-block');
-                $("#fifthgraph span").css({'font-weight': 'bold','color': 'black'});
-                $("#fifthgraph ").css({'color': 'red','font-weight': 'bold'});
+                fifthsecond.appendChild(ptag1);
+                fifthsecond.appendChild(span2);
+                fifthsecond.appendChild(span1);
+                fifthsecond.appendChild(brtag);
+                $("#fifthsecond p, #fifthsecond span").css('display', 'inline-block');
+                $("#fifthsecond span").css({'font-weight': 'bold','color': 'black'});
+                $("#fifthsecond ").css({'color': 'red','font-weight': 'bold'});
                 highc10(arraydata);
                 count++;
             }
@@ -274,35 +290,6 @@ function highc10(arraydata)
 }
 function _display(obj)
 {
-    // var strt=obj.well.STRT.value;
-    // document.getElementById("strt").innerHTML=strt;
-    // var stop=obj.well.STOP.value;
-    // document.getElementById("stop").innerHTML=stop;
-    // var step=obj.well.STEP.value;
-    // document.getElementById("step").innerHTML=step;
-    // var comp=obj.well.COMP.value;
-    // document.getElementById("comp").innerHTML=comp;
-    // var null1=obj.well.NULL.value;
-    // document.getElementById("null1").innerHTML=null1;
-    // var well=obj.well.WELL.value;
-    // document.getElementById("well").innerHTML=well;
-    // var fld=obj.well.FLD.value;
-    // document.getElementById("fld").innerHTML=fld;
-    // var loc=obj.well.LOC.value;
-    // document.getElementById("loc").innerHTML=loc;
-    // var srvc=obj.well.SRVC.value;
-    // document.getElementById("srvc").innerHTML=srvc;
-    // var ctry=obj.well.CTRY.value;
-    // document.getElementById("ctry").innerHTML=ctry;
-    // var stat=obj.well.STAT.value;
-    // document.getElementById("stat").innerHTML=stat;
-    // var cnty=obj.well.CNTY.value;
-    // document.getElementById("cnty").innerHTML=cnty;
-    // var date=obj.well.DATE.value;
-    // document.getElementById("date").innerHTML=date;
-    // var uwi=obj.well.UWI.value;
-    // document.getElementById("uwi").innerHTML=uwi;
-
     Highcharts.chart('container', {
         chart: {
             // marginLeft: 150,
@@ -367,13 +354,14 @@ function _display(obj)
             // name: 'GR',
             showInLegend:false,
             yAxis: 0,
-                data: h11
+            data: seriesshow11==0 ? h11 : emptylist,
             
         }, {
             // name: 'SP',
             showInLegend:false,
             yAxis: 1,
-            data: h12,
+            color: 'red',
+            data: seriesshow12==0 ? h12 : emptylist,
     
         }]
     });
@@ -444,12 +432,13 @@ function _display(obj)
             // name: 'GR',
             showInLegend:false,
             yAxis: 0,
-            data: h21
+            data: seriesshow21==0 ? h21 : emptylist,
         }, {
             // name: 'SP',
             showInLegend:false,
             yAxis: 1,
-            data: h22,
+            color: 'red',
+            data: seriesshow22==0 ? h22 : emptylist,
     
         }]
     });
@@ -521,12 +510,13 @@ function _display(obj)
             // name: 'GR',
             showInLegend:false,
             yAxis: 0,
-            data: h31
+            data: seriesshow31==0 ? h31 : emptylist,
         }, {
             // name: 'SP',
             showInLegend:false,
             yAxis: 1,
-            data: h32,
+            color: 'red',
+            data: seriesshow32==0 ? h32 : emptylist,
     
         }]
     
@@ -599,12 +589,13 @@ function _display(obj)
             // name: 'GR',
             showInLegend:false,
             yAxis: 0,
-            data: h41
+            data: seriesshow41==0 ? h41 : emptylist,
         }, {
             // name: 'SP',
             showInLegend:false,
             yAxis: 1,
-            data: h42,
+            color: 'red',
+            data: seriesshow42==0 ? h42 : emptylist,
     
         }]
     
@@ -677,12 +668,13 @@ function _display(obj)
             // name: 'GR',
             showInLegend:false,
             yAxis: 0,
-            data: h51
+            data: seriesshow51==0 ? h51 : emptylist,
         }, {
             // name: 'SP',
             showInLegend:false,
             yAxis: 1,
-            data: h52,
+            color: 'red',
+            data: seriesshow52==0 ? h52 : emptylist,
     
         }]
     
@@ -704,6 +696,143 @@ function _display(obj)
     $('.fifthgraph').css({
         'border-right': '1px solid black'
     });
-    $('.center').toggle('slow', function() {
+    $('.center').show('slow', function() {
       });
+    $('.upperheading').show('slow', function() {
+      });
+    $('.lowerheading').show('slow', function() {
+      });
+}
+function clearhtml()
+{
+    document.getElementById("container").innerHTML = "";
+    document.getElementById("container2").innerHTML = "";
+    document.getElementById("container3").innerHTML = "";
+    document.getElementById("container4").innerHTML = "";
+    document.getElementById("container5").innerHTML = "";
+}
+function firstfirstcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('firstfirstcheckbox').checked) {
+        seriesshow11=0;
+    }
+    else
+    {
+        seriesshow11=1;
+    }
+    _display(obj);
+}
+function firstsecondcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('firstsecondcheckbox').checked) {
+        seriesshow12=0;
+    }
+    else
+    {
+        seriesshow12=1;
+    }
+    _display(obj);
+}
+
+function secondfirstcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('secondfirstcheckbox').checked) {
+        seriesshow21=0;
+    }
+    else
+    {
+        seriesshow21=1;
+    }
+    _display(obj);
+}
+function secondsecondcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('secondsecondcheckbox').checked) {
+        seriesshow22=0;
+    }
+    else
+    {
+        seriesshow22=1;
+    }
+    _display(obj);
+}
+
+
+function thirdfirstcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('thirdfirstcheckbox').checked) {
+        seriesshow31=0;
+    }
+    else
+    {
+        seriesshow31=1;
+    }
+    _display(obj);
+}
+function thirdsecondcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('thirdsecondcheckbox').checked) {
+        seriesshow32=0;
+    }
+    else
+    {
+        seriesshow32=1;
+    }
+    _display(obj);
+}
+
+function fourthfirstcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('fourthfirstcheckbox').checked) {
+        seriesshow41=0;
+    }
+    else
+    {
+        seriesshow41=1;
+    }
+    _display(obj);
+}
+function fourthsecondcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('fourthsecondcheckbox').checked) {
+        seriesshow42=0;
+    }
+    else
+    {
+        seriesshow42=1;
+    }
+    _display(obj);
+}
+
+function fifthfirstcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('fifthfirstcheckbox').checked) {
+        seriesshow51=0;
+    }
+    else
+    {
+        seriesshow51=1;
+    }
+    _display(obj);
+}
+function fifthsecondcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('fifthsecondcheckbox').checked) {
+        seriesshow52=0;
+    }
+    else
+    {
+        seriesshow52=1;
+    }
+    _display(obj);
 }

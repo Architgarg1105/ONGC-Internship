@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Home Page</title>
   <meta charset="UTF-8">
@@ -21,7 +20,11 @@
 
 <body>
   <div class="header">
-    <h3 style="font-weight:bold;">LOG DATA VIEWER</h3>
+    
+    <h2 style="font-weight:bold;">LOG DATA VIEWER</h2>
+    <img src="https://tse2.mm.bing.net/th?id=OIP.8PQc6nOPdilzMSFnbJsUbgHaHa&pid=Api">
+    
+    
   </div>
   <ul class="list">
     <li class="items"><button class="open-button" onclick="openForm()">Upload</button></li>
@@ -52,30 +55,49 @@
     </div>
     <div class="center">
       <div  class="centerheader">
-        <div class="firstgraph">
-          
-          <p class="red" >CALI: <span id="black">0-120</span></p>
-          <p class="green">COND: <span id="black">20-120</span></p>
+        <div id="firstgraph" class="firstgraph">
+          <div class="upperheading"   id="firstfirst">
+          <input onclick="firstfirstcheckboxfunc()" type="checkbox" id="firstfirstcheckbox" checked>
+          </div>
+          <div class="lowerheading" id="firstsecond" >
+            <input onclick="firstsecondcheckboxfunc()" type="checkbox" id="firstsecondcheckbox" checked>
+          </div>
         </div>
-        <div class="secondgraph">
-          
-          <p class="red" >DFAR: <span id="black">0-120</span></p>
-          <p class="green">DNEAR: <span id="black">20-120</span></p>
+
+        <div id="secondgraph" class="secondgraph">
+          <div class="upperheading"   id="secondfirst">
+            <input onclick="secondfirstcheckboxfunc()" type="checkbox" id="secondfirstcheckbox" checked>
+            </div>
+            <div class="lowerheading" id="secondsecond" >
+              <input onclick="secondsecondcheckboxfunc()" type="checkbox" id="secondsecondcheckbox" checked>
+            </div>
         </div>
-        <div class="thirdgraph">
-          
-          <p class="red" >GAMN: <span id="black">0-120</span></p>
-          <p class="green">NEUT: <span id="black">20-120</span></p>
+
+        <div id="thirdgraph" class="thirdgraph">
+          <div class="upperheading"   id="thirdfirst">
+            <input onclick="thirdfirstcheckboxfunc()" type="checkbox" id="thirdfirstcheckbox" checked>
+            </div>
+            <div class="lowerheading" id="thirdsecond" >
+              <input onclick="thirdsecondcheckboxfunc()" type="checkbox" id="thirdsecondcheckbox" checked>
+            </div>
         </div>
-        <div  class="fourthgraph">
-          
-          <p class="red">PR: <span id="black">0-120</span></p>
-          <p class="green">SP: <span id="black">20-120</span></p>
+
+        <div id="fourthgraph" class="fourthgraph">
+          <div class="upperheading"   id="fourthfirst">
+            <input onclick="fourthfirstcheckboxfunc()" type="checkbox" id="fourthfirstcheckbox" checked>
+            </div>
+            <div class="lowerheading" id="fourthsecond" >
+              <input onclick="fourthsecondcheckboxfunc()" type="checkbox" id="fourthsecondcheckbox" checked>
+            </div>
         </div>
-        <div  class="fifthgraph">
-          
-          <p class="red">NEUT: <span id="black">0-120</span></p>
-          <p class="green">PR: <span id="black">20-120</span></p>
+
+        <div id="fifthgraph" class="fifthgraph">
+          <div class="upperheading"   id="fifthfirst">
+            <input onclick="fifthfirstcheckboxfunc()" type="checkbox" id="fifthfirstcheckbox" checked>
+          </div>
+          <div class="lowerheading" id="fifthsecond" >
+            <input style="text-align:left;" onclick="fifthsecondcheckboxfunc()" type="checkbox" id="fifthsecondcheckbox" checked>
+          </div>
         </div>
       </div>
       <div class="graph">
@@ -106,7 +128,7 @@
       </div>
     </div>
   </div>
-  <script type="text/javascript" src="{{ url_for('static', filename = 'highcharts1.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename = 'highcharts.js') }}"></script>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles.css') }}">
   <script>
     function isNumber(n) {

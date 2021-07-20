@@ -1,4 +1,3 @@
-// var filevalue=getElementById("lasfile").value;
 var h11;
     var h12;
     var h21;
@@ -9,14 +8,45 @@ var h11;
     var h42;
     var h51;
     var h52;
+    var name1;
+    var name2;
+    var name3;
+    var name4;
+    var name5;
+    var name6;
+    var name7;
+    var name8;
+    var name9;
+    var name10;
     var count=0;
+    var seriesshow11=0;
+    var seriesshow12=0;
+    var seriesshow21=0;
+    var seriesshow22=0;
+    var seriesshow31=0;
+    var seriesshow32=0;
+    var seriesshow41=0;
+    var seriesshow42=0;
+    var seriesshow51=0;
+    var seriesshow52=0;
+    var emptylist=[];
+    var obj;
 function lasfilefunc()
 {
     
-    
     var numberList = document.getElementById("numberList");
     var tablebody = document.getElementById("tablebody");
-    var lasdata = new FormData($('#lasfile')[0]);
+    var firstfirst = document.getElementById("firstfirst");
+    var firstsecond = document.getElementById("firstsecond");
+    var secondfirst = document.getElementById("secondfirst");
+    var secondsecond = document.getElementById("secondsecond");
+    var thirdfirst = document.getElementById("thirdfirst");
+    var thirdsecond = document.getElementById("thirdsecond");
+    var fourthfirst = document.getElementById("fourthfirst");
+    var fourthsecond = document.getElementById("fourthsecond");
+    var fifthfirst = document.getElementById("fifthfirst");
+    var fifthsecond = document.getElementById("fifthsecond");
+    lasdata = new FormData($('#lasfile')[0]);
     console.log(lasdata);
     console.log("hi");
     $.ajax({
@@ -32,7 +62,7 @@ function lasfilefunc()
         {
             console.log("successful");
             // console.log(data);
-            var obj=JSON.parse(data);
+            obj=JSON.parse(data);
             // console.log(obj.data);
             traverse(obj.data);
             traverse1(obj.well);
@@ -41,62 +71,140 @@ function lasfilefunc()
     });
     console.log("hello");
 }
+Array.prototype.max = function() {
+    return Math.max.apply(null, this);
+  };
+  Array.prototype.min = function() {
+    return Math.min.apply(null, this);
+  };
 function traverse(o) {
     for (var i in o) {
         if (!!o[i] && typeof(o[i])=="object") {
             var arraydata=o[i];
+            var midspace= ':';
+            var maxval=Math.round(arraydata.max());
+            var minval=Math.round(arraydata.min());
+            var minmaxval=String(minval)+'-'+String(maxval);
+            var temp=i;
+            var str=temp.toUpperCase()
+            var ptag1 = document.createElement("p");
+            var str1 = document.createTextNode(str);
+            ptag1.appendChild(str1);
+            var span1 = document.createElement("span");
+            var spanvalue = document.createTextNode(minmaxval);
+            span1.appendChild(spanvalue);
+            var span2 = document.createElement("span");
+            var spanvalue = document.createTextNode(midspace);
+            span2.appendChild(spanvalue);
+            
+            console.log(ptag1);
             if(i=="dept")
             {
                 continue;
             }
             if(count==0)
             {
-                highc1(arraydata);
+                firstfirst.appendChild(ptag1);
+                firstfirst.appendChild(span2);
+                firstfirst.appendChild(span1);
+                $("#firstfirst p, #firstfirst span").css('display', 'inline-block');
+                $("#firstfirst p").css({'color': 'blue','font-weight': 'bold'});
+                highc1(arraydata,str);
                 count++;
             }
             else if(count==1)
             {
-                highc2(arraydata);
+                firstsecond.appendChild(ptag1);
+                firstsecond.appendChild(span2);
+                firstsecond.appendChild(span1);
+                $("#firstsecond p, #firstsecond span").css('display', 'inline-block');
+                $("#firstsecond span").css({'font-weight': 'bold','color': 'black'});
+                $("#firstsecond ").css({'color': 'red','font-weight': 'bold'});
+                highc2(arraydata,str);
                 count++;
             }
             else if(count==2)
             {
-                highc3(arraydata);
+                secondfirst.appendChild(ptag1);
+                secondfirst.appendChild(span2);
+                secondfirst.appendChild(span1);
+                $("#secondfirst p, #secondfirst span").css('display', 'inline-block');
+                $("#secondfirst p").css({'color': 'blue','font-weight': 'bold'});
+                highc3(arraydata,str);
                 count++;
             }
             else if(count==3)
             {
-                highc4(arraydata);
+                secondsecond.appendChild(ptag1);
+                secondsecond.appendChild(span2);
+                secondsecond.appendChild(span1);
+                $("#secondsecond p, #secondsecond span").css('display', 'inline-block');
+                $("#secondsecond span").css({'font-weight': 'bold','color': 'black'});
+                $("#secondsecond ").css({'color': 'red','font-weight': 'bold'});
+                highc4(arraydata,str);
                 count++;
             }
             else if(count==4)
             {
-                highc5(arraydata);
+                thirdfirst.appendChild(ptag1);
+                thirdfirst.appendChild(span2);
+                thirdfirst.appendChild(span1);
+                $("#thirdfirst p, #thirdfirst span").css('display', 'inline-block');
+                $("#thirdfirst p").css({'color': 'blue','font-weight': 'bold'});
+                highc5(arraydata,str);
                 count++;
             }
             else if(count==5)
             {
-                highc6(arraydata);
+                thirdsecond.appendChild(ptag1);
+                thirdsecond.appendChild(span2);
+                thirdsecond.appendChild(span1);
+                $("#thirdsecond p, #thirdsecond span").css('display', 'inline-block');
+                $("#thirdsecond span").css({'font-weight': 'bold','color': 'black'});
+                $("#thirdsecond ").css({'color': 'red','font-weight': 'bold'});
+                highc6(arraydata,str);
                 count++;
             }
             else if(count==6)
             {
-                highc7(arraydata);
+                fourthfirst.appendChild(ptag1);
+                fourthfirst.appendChild(span2);
+                fourthfirst.appendChild(span1);
+                $("#fourthfirst p, #fourthfirst span").css('display', 'inline-block');
+                $("#fourthfirst p").css({'color': 'blue','font-weight': 'bold'});
+                highc7(arraydata,str);
                 count++;
             }
             else if(count==7)
             {
-                highc8(arraydata);
+                fourthsecond.appendChild(ptag1);
+                fourthsecond.appendChild(span2);
+                fourthsecond.appendChild(span1);
+                $("#fourthsecond p, #fourthsecond span").css('display', 'inline-block');
+                $("#fourthsecond span").css({'font-weight': 'bold','color': 'black'});
+                $("#fourthsecond ").css({'color': 'red','font-weight': 'bold'});
+                highc8(arraydata,str);
                 count++;
             }
             else if(count==8)
             {
-                highc9(arraydata);
+                fifthfirst.appendChild(ptag1);
+                fifthfirst.appendChild(span2);
+                fifthfirst.appendChild(span1);
+                $("#fifthfirst p, #fifthfirst span").css('display', 'inline-block');
+                $("#fifthfirst p").css({'color': 'blue','font-weight': 'bold'});
+                highc9(arraydata,str);
                 count++;
             }
             else if(count==9)
             {
-                highc10(arraydata);
+                fifthsecond.appendChild(ptag1);
+                fifthsecond.appendChild(span2);
+                fifthsecond.appendChild(span1);
+                $("#fifthsecond p, #fifthsecond span").css('display', 'inline-block');
+                $("#fifthsecond span").css({'font-weight': 'bold','color': 'black'});
+                $("#fifthsecond ").css({'color': 'red','font-weight': 'bold'});
+                highc10(arraydata,str);
                 count++;
             }
             var newNumberListItem = document.createElement("li");
@@ -140,81 +248,79 @@ function traverse1(o) {
         }
     }
 }
-function highc1(arraydata)
+function highc1(arraydata,str)
 {
     h11=arraydata;
+    name1=str;
 }
-function highc2(arraydata)
+function highc2(arraydata,str)
 {
     h12=arraydata;
+    name2=str;
 }
-function highc3(arraydata)
+function highc3(arraydata,str)
 {
     h21=arraydata;
+    name3=str;
 }
-function highc4(arraydata)
+function highc4(arraydata,str)
 {
     h22=arraydata;
+    name4=str;
 }
-function highc5(arraydata)
+function highc5(arraydata,str)
 {
     h31=arraydata;
+    name5=str;
 }
-function highc6(arraydata)
+function highc6(arraydata,str)
 {
     h32=arraydata;
+    name6=str;
 }
-function highc7(arraydata)
+function highc7(arraydata,str)
 {
     h41=arraydata;
+    name7=str;
 }
-function highc8(arraydata)
+function highc8(arraydata,str)
 {
     h42=arraydata;
+    name8=str;
 }
-function highc9(arraydata)
+function highc9(arraydata,str)
 {
     h51=arraydata;
+    name9=str;
 }
-function highc10(arraydata)
+function highc10(arraydata,str)
 {
     h52=arraydata;
+    name10=str;
 }
 function _display(obj)
 {
-    // var strt=obj.well.STRT.value;
-    // document.getElementById("strt").innerHTML=strt;
-    // var stop=obj.well.STOP.value;
-    // document.getElementById("stop").innerHTML=stop;
-    // var step=obj.well.STEP.value;
-    // document.getElementById("step").innerHTML=step;
-    // var comp=obj.well.COMP.value;
-    // document.getElementById("comp").innerHTML=comp;
-    // var null1=obj.well.NULL.value;
-    // document.getElementById("null1").innerHTML=null1;
-    // var well=obj.well.WELL.value;
-    // document.getElementById("well").innerHTML=well;
-    // var fld=obj.well.FLD.value;
-    // document.getElementById("fld").innerHTML=fld;
-    // var loc=obj.well.LOC.value;
-    // document.getElementById("loc").innerHTML=loc;
-    // var srvc=obj.well.SRVC.value;
-    // document.getElementById("srvc").innerHTML=srvc;
-    // var ctry=obj.well.CTRY.value;
-    // document.getElementById("ctry").innerHTML=ctry;
-    // var stat=obj.well.STAT.value;
-    // document.getElementById("stat").innerHTML=stat;
-    // var cnty=obj.well.CNTY.value;
-    // document.getElementById("cnty").innerHTML=cnty;
-    // var date=obj.well.DATE.value;
-    // document.getElementById("date").innerHTML=date;
-    // var uwi=obj.well.UWI.value;
-    // document.getElementById("uwi").innerHTML=uwi;
-
     Highcharts.chart('container', {
         chart: {
+            zoomType: 'x',
+            plotBackgroundColor:'#fff',
             // marginLeft: 150,
             inverted: true,
+        },
+        tooltip: {
+
+            formatter: function() {
+                return '<b>'+'Depth:' +'</b>'+ this.x + '</b><br/>' +
+                    '<b>'+this.series.name +'</b>'+ ': ' + this.y + '<br/>';
+            },
+            positioner: function(labelWidth, labelHeight, point) {
+                var tooltipX = point.plotX + 20;
+                var tooltipY = point.plotY - 30;
+                return {
+                    x: tooltipX,
+                    y: tooltipY
+                };
+            }
         },
         title: {
             text: ''
@@ -272,23 +378,40 @@ function _display(obj)
             opposite: true,
         }],
         series: [{
-            // name: 'GR',
+            name: name1,
             showInLegend:false,
             yAxis: 0,
-                data: h11
+            data: seriesshow11==0 ? h11 : emptylist,
             
         }, {
-            // name: 'SP',
+            name: name2,
             showInLegend:false,
             yAxis: 1,
-            data: h12,
+            color: 'red',
+            data: seriesshow12==0 ? h12 : emptylist,
     
         }]
     });
     Highcharts.chart('container2', {
         chart: {
             // marginLeft: 150,
+            zoomType: 'x',
             inverted: true,
+        },
+        tooltip: {
+
+            formatter: function() {
+                return '<b>'+'Depth:' +'</b>'+ this.x + '</b><br/>' +
+                    '<b>'+this.series.name +'</b>'+ ': ' + this.y + '<br/>';
+            },
+            positioner: function(labelWidth, labelHeight, point) {
+                var tooltipX = point.plotX + 20;
+                var tooltipY = point.plotY - 30;
+                return {
+                    x: tooltipX,
+                    y: tooltipY
+                };
+            }
         },
         title: {
             text: ''
@@ -349,22 +472,39 @@ function _display(obj)
             opposite: true,
         }],
         series: [{
-            // name: 'GR',
+            name: name3,
             showInLegend:false,
             yAxis: 0,
-            data: h21
+            data: seriesshow21==0 ? h21 : emptylist,
         }, {
-            // name: 'SP',
+            name: name4,
             showInLegend:false,
             yAxis: 1,
-            data: h22,
+            color: 'red',
+            data: seriesshow22==0 ? h22 : emptylist,
     
         }]
     });
     Highcharts.chart('container3', {
         chart: {
             // marginLeft: 150,
+            zoomType: 'x',
             inverted: true,
+        },
+        tooltip: {
+
+            formatter: function() {
+                return '<b>'+'Depth:' +'</b>'+ this.x + '</b><br/>' +
+                    '<b>'+this.series.name +'</b>'+ ': ' + this.y + '<br/>';
+            },
+            positioner: function(labelWidth, labelHeight, point) {
+                var tooltipX = point.plotX + 20;
+                var tooltipY = point.plotY - 30;
+                return {
+                    x: tooltipX,
+                    y: tooltipY
+                };
+            }
         },
         title: {
             text: ''
@@ -426,15 +566,16 @@ function _display(obj)
             opposite: true,
         }],
         series: [{
-            // name: 'GR',
+            name: name5,
             showInLegend:false,
             yAxis: 0,
-            data: h31
+            data: seriesshow31==0 ? h31 : emptylist,
         }, {
-            // name: 'SP',
+            name: name6,
             showInLegend:false,
             yAxis: 1,
-            data: h32,
+            color: 'red',
+            data: seriesshow32==0 ? h32 : emptylist,
     
         }]
     
@@ -442,7 +583,23 @@ function _display(obj)
     Highcharts.chart('container4', {
         chart: {
             // marginLeft: 150,
+            zoomType: 'x',
             inverted: true,
+        },
+        tooltip: {
+
+            formatter: function() {
+                return '<b>'+'Depth:' +'</b>'+ this.x + '</b><br/>' +
+                    '<b>'+this.series.name +'</b>'+ ': ' + this.y + '<br/>';
+            },
+            positioner: function(labelWidth, labelHeight, point) {
+                var tooltipX = point.plotX + 20;
+                var tooltipY = point.plotY - 30;
+                return {
+                    x: tooltipX,
+                    y: tooltipY
+                };
+            }
         },
         title: {
             text: ''
@@ -504,15 +661,16 @@ function _display(obj)
             opposite: true,
         }],
         series: [{
-            // name: 'GR',
+            name: name7,
             showInLegend:false,
             yAxis: 0,
-            data: h41
+            data: seriesshow41==0 ? h41 : emptylist,
         }, {
-            // name: 'SP',
+            name: name8,
             showInLegend:false,
             yAxis: 1,
-            data: h42,
+            color: 'red',
+            data: seriesshow42==0 ? h42 : emptylist,
     
         }]
     
@@ -520,7 +678,23 @@ function _display(obj)
     Highcharts.chart('container5', {
         chart: {
             // marginLeft: 150,
+            zoomType: 'x',
             inverted: true,
+        },
+        tooltip: {
+
+            formatter: function() {
+                return '<b>'+'Depth:' +'</b>'+ this.x + '</b><br/>' +
+                    '<b>'+this.series.name +'</b>'+ ': ' + this.y + '<br/>';
+            },
+            positioner: function(labelWidth, labelHeight, point) {
+                var tooltipX = point.plotX + 20;
+                var tooltipY = point.plotY - 30;
+                return {
+                    x: tooltipX,
+                    y: tooltipY
+                };
+            }
         },
         title: {
             text: ''
@@ -582,15 +756,16 @@ function _display(obj)
             opposite: true,
         }],
         series: [{
-            // name: 'GR',
+            name: name9,
             showInLegend:false,
             yAxis: 0,
-            data: h51
+            data: seriesshow51==0 ? h51 : emptylist,
         }, {
-            // name: 'SP',
+            name: name10,
             showInLegend:false,
             yAxis: 1,
-            data: h52,
+            color: 'red',
+            data: seriesshow52==0 ? h52 : emptylist,
     
         }]
     
@@ -612,6 +787,148 @@ function _display(obj)
     $('.fifthgraph').css({
         'border-right': '1px solid black'
     });
-    $('.center').toggle('slow', function() {
+    $('.center').show('slow', function() {
       });
+    $('.upperheading').show('slow', function() {
+      });
+    $('.lowerheading').show('slow', function() {
+      });
+    $('.tree').show('slow', function() {
+    });
+    $('.lasdata').show('slow', function() {
+    });
+      
+}
+function clearhtml()
+{
+    document.getElementById("container").innerHTML = "";
+    document.getElementById("container2").innerHTML = "";
+    document.getElementById("container3").innerHTML = "";
+    document.getElementById("container4").innerHTML = "";
+    document.getElementById("container5").innerHTML = "";
+}
+function firstfirstcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('firstfirstcheckbox').checked) {
+        seriesshow11=0;
+    }
+    else
+    {
+        seriesshow11=1;
+    }
+    _display(obj);
+}
+function firstsecondcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('firstsecondcheckbox').checked) {
+        seriesshow12=0;
+    }
+    else
+    {
+        seriesshow12=1;
+    }
+    _display(obj);
+}
+
+function secondfirstcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('secondfirstcheckbox').checked) {
+        seriesshow21=0;
+    }
+    else
+    {
+        seriesshow21=1;
+    }
+    _display(obj);
+}
+function secondsecondcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('secondsecondcheckbox').checked) {
+        seriesshow22=0;
+    }
+    else
+    {
+        seriesshow22=1;
+    }
+    _display(obj);
+}
+
+
+function thirdfirstcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('thirdfirstcheckbox').checked) {
+        seriesshow31=0;
+    }
+    else
+    {
+        seriesshow31=1;
+    }
+    _display(obj);
+}
+function thirdsecondcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('thirdsecondcheckbox').checked) {
+        seriesshow32=0;
+    }
+    else
+    {
+        seriesshow32=1;
+    }
+    _display(obj);
+}
+
+function fourthfirstcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('fourthfirstcheckbox').checked) {
+        seriesshow41=0;
+    }
+    else
+    {
+        seriesshow41=1;
+    }
+    _display(obj);
+}
+function fourthsecondcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('fourthsecondcheckbox').checked) {
+        seriesshow42=0;
+    }
+    else
+    {
+        seriesshow42=1;
+    }
+    _display(obj);
+}
+
+function fifthfirstcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('fifthfirstcheckbox').checked) {
+        seriesshow51=0;
+    }
+    else
+    {
+        seriesshow51=1;
+    }
+    _display(obj);
+}
+function fifthsecondcheckboxfunc()
+{
+    clearhtml();
+    if (document.getElementById('fifthsecondcheckbox').checked) {
+        seriesshow52=0;
+    }
+    else
+    {
+        seriesshow52=1;
+    }
+    _display(obj);
 }

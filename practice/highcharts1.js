@@ -8,6 +8,16 @@ var h11;
     var h42;
     var h51;
     var h52;
+    var name1;
+    var name2;
+    var name3;
+    var name4;
+    var name5;
+    var name6;
+    var name7;
+    var name8;
+    var name9;
+    var name10;
     var count=0;
     var seriesshow11=0;
     var seriesshow12=0;
@@ -72,8 +82,8 @@ function traverse(o) {
         if (!!o[i] && typeof(o[i])=="object") {
             var arraydata=o[i];
             var midspace= ':';
-            var maxval=arraydata.max();
-            var minval=arraydata.min();
+            var maxval=Math.round(arraydata.max());
+            var minval=Math.round(arraydata.min());
             var minmaxval=String(minval)+'-'+String(maxval);
             var temp=i;
             var str=temp.toUpperCase()
@@ -86,7 +96,7 @@ function traverse(o) {
             var span2 = document.createElement("span");
             var spanvalue = document.createTextNode(midspace);
             span2.appendChild(spanvalue);
-            var brtag = document.createElement("br");
+            
             console.log(ptag1);
             if(i=="dept")
             {
@@ -97,10 +107,9 @@ function traverse(o) {
                 firstfirst.appendChild(ptag1);
                 firstfirst.appendChild(span2);
                 firstfirst.appendChild(span1);
-                firstfirst.appendChild(brtag);
                 $("#firstfirst p, #firstfirst span").css('display', 'inline-block');
                 $("#firstfirst p").css({'color': 'blue','font-weight': 'bold'});
-                highc1(arraydata);
+                highc1(arraydata,str);
                 count++;
             }
             else if(count==1)
@@ -108,11 +117,10 @@ function traverse(o) {
                 firstsecond.appendChild(ptag1);
                 firstsecond.appendChild(span2);
                 firstsecond.appendChild(span1);
-                firstsecond.appendChild(brtag);
                 $("#firstsecond p, #firstsecond span").css('display', 'inline-block');
                 $("#firstsecond span").css({'font-weight': 'bold','color': 'black'});
                 $("#firstsecond ").css({'color': 'red','font-weight': 'bold'});
-                highc2(arraydata);
+                highc2(arraydata,str);
                 count++;
             }
             else if(count==2)
@@ -120,10 +128,9 @@ function traverse(o) {
                 secondfirst.appendChild(ptag1);
                 secondfirst.appendChild(span2);
                 secondfirst.appendChild(span1);
-                firstgraph.appendChild(brtag);
                 $("#secondfirst p, #secondfirst span").css('display', 'inline-block');
                 $("#secondfirst p").css({'color': 'blue','font-weight': 'bold'});
-                highc3(arraydata);
+                highc3(arraydata,str);
                 count++;
             }
             else if(count==3)
@@ -131,11 +138,10 @@ function traverse(o) {
                 secondsecond.appendChild(ptag1);
                 secondsecond.appendChild(span2);
                 secondsecond.appendChild(span1);
-                firstgraph.appendChild(brtag);
                 $("#secondsecond p, #secondsecond span").css('display', 'inline-block');
                 $("#secondsecond span").css({'font-weight': 'bold','color': 'black'});
                 $("#secondsecond ").css({'color': 'red','font-weight': 'bold'});
-                highc4(arraydata);
+                highc4(arraydata,str);
                 count++;
             }
             else if(count==4)
@@ -143,10 +149,9 @@ function traverse(o) {
                 thirdfirst.appendChild(ptag1);
                 thirdfirst.appendChild(span2);
                 thirdfirst.appendChild(span1);
-                thirdfirst.appendChild(brtag);
                 $("#thirdfirst p, #thirdfirst span").css('display', 'inline-block');
                 $("#thirdfirst p").css({'color': 'blue','font-weight': 'bold'});
-                highc5(arraydata);
+                highc5(arraydata,str);
                 count++;
             }
             else if(count==5)
@@ -154,11 +159,10 @@ function traverse(o) {
                 thirdsecond.appendChild(ptag1);
                 thirdsecond.appendChild(span2);
                 thirdsecond.appendChild(span1);
-                thirdsecond.appendChild(brtag);
                 $("#thirdsecond p, #thirdsecond span").css('display', 'inline-block');
                 $("#thirdsecond span").css({'font-weight': 'bold','color': 'black'});
                 $("#thirdsecond ").css({'color': 'red','font-weight': 'bold'});
-                highc6(arraydata);
+                highc6(arraydata,str);
                 count++;
             }
             else if(count==6)
@@ -166,10 +170,9 @@ function traverse(o) {
                 fourthfirst.appendChild(ptag1);
                 fourthfirst.appendChild(span2);
                 fourthfirst.appendChild(span1);
-                fourthfirst.appendChild(brtag);
                 $("#fourthfirst p, #fourthfirst span").css('display', 'inline-block');
                 $("#fourthfirst p").css({'color': 'blue','font-weight': 'bold'});
-                highc7(arraydata);
+                highc7(arraydata,str);
                 count++;
             }
             else if(count==7)
@@ -177,11 +180,10 @@ function traverse(o) {
                 fourthsecond.appendChild(ptag1);
                 fourthsecond.appendChild(span2);
                 fourthsecond.appendChild(span1);
-                fourthsecond.appendChild(brtag);
                 $("#fourthsecond p, #fourthsecond span").css('display', 'inline-block');
                 $("#fourthsecond span").css({'font-weight': 'bold','color': 'black'});
                 $("#fourthsecond ").css({'color': 'red','font-weight': 'bold'});
-                highc8(arraydata);
+                highc8(arraydata,str);
                 count++;
             }
             else if(count==8)
@@ -189,10 +191,9 @@ function traverse(o) {
                 fifthfirst.appendChild(ptag1);
                 fifthfirst.appendChild(span2);
                 fifthfirst.appendChild(span1);
-                fifthfirst.appendChild(brtag);
                 $("#fifthfirst p, #fifthfirst span").css('display', 'inline-block');
                 $("#fifthfirst p").css({'color': 'blue','font-weight': 'bold'});
-                highc9(arraydata);
+                highc9(arraydata,str);
                 count++;
             }
             else if(count==9)
@@ -200,11 +201,10 @@ function traverse(o) {
                 fifthsecond.appendChild(ptag1);
                 fifthsecond.appendChild(span2);
                 fifthsecond.appendChild(span1);
-                fifthsecond.appendChild(brtag);
                 $("#fifthsecond p, #fifthsecond span").css('display', 'inline-block');
                 $("#fifthsecond span").css({'font-weight': 'bold','color': 'black'});
                 $("#fifthsecond ").css({'color': 'red','font-weight': 'bold'});
-                highc10(arraydata);
+                highc10(arraydata,str);
                 count++;
             }
             var newNumberListItem = document.createElement("li");
@@ -248,52 +248,79 @@ function traverse1(o) {
         }
     }
 }
-function highc1(arraydata)
+function highc1(arraydata,str)
 {
     h11=arraydata;
+    name1=str;
 }
-function highc2(arraydata)
+function highc2(arraydata,str)
 {
     h12=arraydata;
+    name2=str;
 }
-function highc3(arraydata)
+function highc3(arraydata,str)
 {
     h21=arraydata;
+    name3=str;
 }
-function highc4(arraydata)
+function highc4(arraydata,str)
 {
     h22=arraydata;
+    name4=str;
 }
-function highc5(arraydata)
+function highc5(arraydata,str)
 {
     h31=arraydata;
+    name5=str;
 }
-function highc6(arraydata)
+function highc6(arraydata,str)
 {
     h32=arraydata;
+    name6=str;
 }
-function highc7(arraydata)
+function highc7(arraydata,str)
 {
     h41=arraydata;
+    name7=str;
 }
-function highc8(arraydata)
+function highc8(arraydata,str)
 {
     h42=arraydata;
+    name8=str;
 }
-function highc9(arraydata)
+function highc9(arraydata,str)
 {
     h51=arraydata;
+    name9=str;
 }
-function highc10(arraydata)
+function highc10(arraydata,str)
 {
     h52=arraydata;
+    name10=str;
 }
 function _display(obj)
 {
     Highcharts.chart('container', {
         chart: {
+            zoomType: 'x',
+            plotBackgroundColor:'#fff',
             // marginLeft: 150,
             inverted: true,
+        },
+        tooltip: {
+
+            formatter: function() {
+                return '<b>'+'Depth:' +'</b>'+ this.x + '</b><br/>' +
+                    '<b>'+this.series.name +'</b>'+ ': ' + this.y + '<br/>';
+            },
+            positioner: function(labelWidth, labelHeight, point) {
+                var tooltipX = point.plotX + 20;
+                var tooltipY = point.plotY - 30;
+                return {
+                    x: tooltipX,
+                    y: tooltipY
+                };
+            }
         },
         title: {
             text: ''
@@ -351,13 +378,13 @@ function _display(obj)
             opposite: true,
         }],
         series: [{
-            // name: 'GR',
+            name: name1,
             showInLegend:false,
             yAxis: 0,
             data: seriesshow11==0 ? h11 : emptylist,
             
         }, {
-            // name: 'SP',
+            name: name2,
             showInLegend:false,
             yAxis: 1,
             color: 'red',
@@ -368,7 +395,23 @@ function _display(obj)
     Highcharts.chart('container2', {
         chart: {
             // marginLeft: 150,
+            zoomType: 'x',
             inverted: true,
+        },
+        tooltip: {
+
+            formatter: function() {
+                return '<b>'+'Depth:' +'</b>'+ this.x + '</b><br/>' +
+                    '<b>'+this.series.name +'</b>'+ ': ' + this.y + '<br/>';
+            },
+            positioner: function(labelWidth, labelHeight, point) {
+                var tooltipX = point.plotX + 20;
+                var tooltipY = point.plotY - 30;
+                return {
+                    x: tooltipX,
+                    y: tooltipY
+                };
+            }
         },
         title: {
             text: ''
@@ -429,12 +472,12 @@ function _display(obj)
             opposite: true,
         }],
         series: [{
-            // name: 'GR',
+            name: name3,
             showInLegend:false,
             yAxis: 0,
             data: seriesshow21==0 ? h21 : emptylist,
         }, {
-            // name: 'SP',
+            name: name4,
             showInLegend:false,
             yAxis: 1,
             color: 'red',
@@ -445,7 +488,23 @@ function _display(obj)
     Highcharts.chart('container3', {
         chart: {
             // marginLeft: 150,
+            zoomType: 'x',
             inverted: true,
+        },
+        tooltip: {
+
+            formatter: function() {
+                return '<b>'+'Depth:' +'</b>'+ this.x + '</b><br/>' +
+                    '<b>'+this.series.name +'</b>'+ ': ' + this.y + '<br/>';
+            },
+            positioner: function(labelWidth, labelHeight, point) {
+                var tooltipX = point.plotX + 20;
+                var tooltipY = point.plotY - 30;
+                return {
+                    x: tooltipX,
+                    y: tooltipY
+                };
+            }
         },
         title: {
             text: ''
@@ -507,12 +566,12 @@ function _display(obj)
             opposite: true,
         }],
         series: [{
-            // name: 'GR',
+            name: name5,
             showInLegend:false,
             yAxis: 0,
             data: seriesshow31==0 ? h31 : emptylist,
         }, {
-            // name: 'SP',
+            name: name6,
             showInLegend:false,
             yAxis: 1,
             color: 'red',
@@ -524,7 +583,23 @@ function _display(obj)
     Highcharts.chart('container4', {
         chart: {
             // marginLeft: 150,
+            zoomType: 'x',
             inverted: true,
+        },
+        tooltip: {
+
+            formatter: function() {
+                return '<b>'+'Depth:' +'</b>'+ this.x + '</b><br/>' +
+                    '<b>'+this.series.name +'</b>'+ ': ' + this.y + '<br/>';
+            },
+            positioner: function(labelWidth, labelHeight, point) {
+                var tooltipX = point.plotX + 20;
+                var tooltipY = point.plotY - 30;
+                return {
+                    x: tooltipX,
+                    y: tooltipY
+                };
+            }
         },
         title: {
             text: ''
@@ -586,12 +661,12 @@ function _display(obj)
             opposite: true,
         }],
         series: [{
-            // name: 'GR',
+            name: name7,
             showInLegend:false,
             yAxis: 0,
             data: seriesshow41==0 ? h41 : emptylist,
         }, {
-            // name: 'SP',
+            name: name8,
             showInLegend:false,
             yAxis: 1,
             color: 'red',
@@ -603,7 +678,23 @@ function _display(obj)
     Highcharts.chart('container5', {
         chart: {
             // marginLeft: 150,
+            zoomType: 'x',
             inverted: true,
+        },
+        tooltip: {
+
+            formatter: function() {
+                return '<b>'+'Depth:' +'</b>'+ this.x + '</b><br/>' +
+                    '<b>'+this.series.name +'</b>'+ ': ' + this.y + '<br/>';
+            },
+            positioner: function(labelWidth, labelHeight, point) {
+                var tooltipX = point.plotX + 20;
+                var tooltipY = point.plotY - 30;
+                return {
+                    x: tooltipX,
+                    y: tooltipY
+                };
+            }
         },
         title: {
             text: ''
@@ -665,12 +756,12 @@ function _display(obj)
             opposite: true,
         }],
         series: [{
-            // name: 'GR',
+            name: name9,
             showInLegend:false,
             yAxis: 0,
             data: seriesshow51==0 ? h51 : emptylist,
         }, {
-            // name: 'SP',
+            name: name10,
             showInLegend:false,
             yAxis: 1,
             color: 'red',
@@ -702,6 +793,11 @@ function _display(obj)
       });
     $('.lowerheading').show('slow', function() {
       });
+    $('.tree').show('slow', function() {
+    });
+    $('.lasdata').show('slow', function() {
+    });
+      
 }
 function clearhtml()
 {

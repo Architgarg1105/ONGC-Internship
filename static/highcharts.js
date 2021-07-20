@@ -1,4 +1,4 @@
-var h11;
+    var h11;
     var h12;
     var h21;
     var h22;
@@ -47,8 +47,8 @@ function lasfilefunc()
     var fifthfirst = document.getElementById("fifthfirst");
     var fifthsecond = document.getElementById("fifthsecond");
     lasdata = new FormData($('#lasfile')[0]);
-    console.log(lasdata);
-    console.log("hi");
+    // console.log(lasdata);
+    // console.log("hi");
     $.ajax({
         type: 'POST',
         data: lasdata,
@@ -60,7 +60,7 @@ function lasfilefunc()
         cache:false,
         success:function(data)
         {
-            console.log("successful");
+            // console.log("successful");
             // console.log(data);
             obj=JSON.parse(data);
             // console.log(obj.data);
@@ -69,7 +69,7 @@ function lasfilefunc()
             _display(obj);
         }
     });
-    console.log("hello");
+    // console.log("hello");
 }
 Array.prototype.max = function() {
     return Math.max.apply(null, this);
@@ -81,9 +81,10 @@ function traverse(o) {
     for (var i in o) {
         if (!!o[i] && typeof(o[i])=="object") {
             var arraydata=o[i];
+           
             var midspace= ':';
-            var maxval=Math.round(arraydata.max());
-            var minval=Math.round(arraydata.min());
+            var maxval=Math.round(arraydata.max()* 100) / 100;
+            var minval=Math.round(arraydata.min()* 100) / 100;
             var minmaxval=String(minval)+'-'+String(maxval);
             var temp=i;
             var str=temp.toUpperCase()
@@ -97,7 +98,7 @@ function traverse(o) {
             var spanvalue = document.createTextNode(midspace);
             span2.appendChild(spanvalue);
             
-            console.log(ptag1);
+            // console.log(ptag1);
             if(i=="dept")
             {
                 continue;
@@ -119,7 +120,7 @@ function traverse(o) {
                 firstsecond.appendChild(span1);
                 $("#firstsecond p, #firstsecond span").css('display', 'inline-block');
                 $("#firstsecond span").css({'font-weight': 'bold','color': 'black'});
-                $("#firstsecond ").css({'color': 'red','font-weight': 'bold'});
+                $("#firstsecond ").css({'color': 'black','font-weight': 'bold'});
                 highc2(arraydata,str);
                 count++;
             }
@@ -140,7 +141,7 @@ function traverse(o) {
                 secondsecond.appendChild(span1);
                 $("#secondsecond p, #secondsecond span").css('display', 'inline-block');
                 $("#secondsecond span").css({'font-weight': 'bold','color': 'black'});
-                $("#secondsecond ").css({'color': 'red','font-weight': 'bold'});
+                $("#secondsecond ").css({'color': 'green','font-weight': 'bold'});
                 highc4(arraydata,str);
                 count++;
             }
@@ -150,7 +151,7 @@ function traverse(o) {
                 thirdfirst.appendChild(span2);
                 thirdfirst.appendChild(span1);
                 $("#thirdfirst p, #thirdfirst span").css('display', 'inline-block');
-                $("#thirdfirst p").css({'color': 'blue','font-weight': 'bold'});
+                $("#thirdfirst p").css({'color': 'red','font-weight': 'bold'});
                 highc5(arraydata,str);
                 count++;
             }
@@ -161,7 +162,7 @@ function traverse(o) {
                 thirdsecond.appendChild(span1);
                 $("#thirdsecond p, #thirdsecond span").css('display', 'inline-block');
                 $("#thirdsecond span").css({'font-weight': 'bold','color': 'black'});
-                $("#thirdsecond ").css({'color': 'red','font-weight': 'bold'});
+                $("#thirdsecond ").css({'color': 'blue','font-weight': 'bold'});
                 highc6(arraydata,str);
                 count++;
             }
@@ -171,7 +172,7 @@ function traverse(o) {
                 fourthfirst.appendChild(span2);
                 fourthfirst.appendChild(span1);
                 $("#fourthfirst p, #fourthfirst span").css('display', 'inline-block');
-                $("#fourthfirst p").css({'color': 'blue','font-weight': 'bold'});
+                $("#fourthfirst p").css({'color': 'red','font-weight': 'bold'});
                 highc7(arraydata,str);
                 count++;
             }
@@ -182,7 +183,7 @@ function traverse(o) {
                 fourthsecond.appendChild(span1);
                 $("#fourthsecond p, #fourthsecond span").css('display', 'inline-block');
                 $("#fourthsecond span").css({'font-weight': 'bold','color': 'black'});
-                $("#fourthsecond ").css({'color': 'red','font-weight': 'bold'});
+                $("#fourthsecond ").css({'color': 'black','font-weight': 'bold'});
                 highc8(arraydata,str);
                 count++;
             }
@@ -192,7 +193,7 @@ function traverse(o) {
                 fifthfirst.appendChild(span2);
                 fifthfirst.appendChild(span1);
                 $("#fifthfirst p, #fifthfirst span").css('display', 'inline-block');
-                $("#fifthfirst p").css({'color': 'blue','font-weight': 'bold'});
+                $("#fifthfirst p").css({'color': 'black','font-weight': 'bold'});
                 highc9(arraydata,str);
                 count++;
             }
@@ -207,13 +208,19 @@ function traverse(o) {
                 highc10(arraydata,str);
                 count++;
             }
-            var newNumberListItem = document.createElement("li");
-            var temp=i;
-            // console.log(o[i]);
-            var str=temp.toUpperCase()
-            var numberListValue = document.createTextNode(str);
-            newNumberListItem.appendChild(numberListValue);
-            numberList.appendChild(newNumberListItem);
+            if(count<=10)
+            {
+                var newNumberListItem = document.createElement("li");
+                var temp=i;
+                console.log(count);
+                console.log('hello');
+                var str=temp.toUpperCase()
+                var numberListValue = document.createTextNode(str);
+                newNumberListItem.appendChild(numberListValue);
+                numberList.appendChild(newNumberListItem);
+            }
+            if(count==10)
+                count++;
             traverse(i);
         } else {
             // console.log(i, o[i]);
@@ -240,6 +247,7 @@ function traverse1(o) {
             newNumberListItem.appendChild(td1);
             newNumberListItem.appendChild(spa);
             newNumberListItem.appendChild(td2);
+            td1.setAttribute("style", " font-weight:bold;font-size:13px;");
             tablebody.appendChild(newNumberListItem);
             traverse1(i);
         } else {
@@ -350,9 +358,10 @@ function _display(obj)
             categories: obj.data.dept,
             min: 0,
             max: 200,
-            scrollbar: {
-                enabled: true
-            }
+            labels: {
+                enabled: false
+            },
+           
         },
     
         yAxis: [{
@@ -365,7 +374,7 @@ function _display(obj)
             },
             min: 20,
             max: 100,
-            type: 'logarithmic',
+            // type: 'logarithmic',
             opposite: true,
         }, {
             labels: {
@@ -381,13 +390,19 @@ function _display(obj)
             name: name1,
             showInLegend:false,
             yAxis: 0,
+            color:'blue',
+            min: -0.06,
+            max: 0.54,
             data: seriesshow11==0 ? h11 : emptylist,
             
         }, {
             name: name2,
             showInLegend:false,
             yAxis: 1,
-            color: 'red',
+            color: 'black',
+            dashStyle: 'shortdot',
+            min:6,
+            max:16,
             data: seriesshow12==0 ? h12 : emptylist,
     
         }]
@@ -435,18 +450,15 @@ function _display(obj)
             enabled: false
         },
         xAxis: {
-            labels: {
-                enabled: false
-            },
             visible: true,
             minorTickInterval: 'auto',
             tickInterval: 20,
             categories: obj.data.dept,
             min: 0,
             max: 200,
-            scrollbar: {
-                enabled: true
-            }
+            // scrollbar: {
+            //     enabled: true
+            // }
         },
     
         yAxis: [{
@@ -459,7 +471,7 @@ function _display(obj)
             },
             min: 20,
             max: 100,
-            type: 'logarithmic',
+            // type: 'logarithmic',
             opposite: true,
         }, {
             labels: {
@@ -475,12 +487,17 @@ function _display(obj)
             name: name3,
             showInLegend:false,
             yAxis: 0,
+            color:'blue',
+            min:-0.06,
+            max:0.54,
             data: seriesshow21==0 ? h21 : emptylist,
         }, {
             name: name4,
             showInLegend:false,
             yAxis: 1,
-            color: 'red',
+            min:0,
+            max:150,
+            color: 'green',
             data: seriesshow22==0 ? h22 : emptylist,
     
         }]
@@ -537,9 +554,9 @@ function _display(obj)
             categories: obj.data.dept,
             min: 0,
             max: 200,
-            scrollbar: {
-                enabled: true
-            }
+            // scrollbar: {
+            //     enabled: true
+            // }
         },
     
         yAxis: [{
@@ -551,9 +568,9 @@ function _display(obj)
             title: {
                 text: ' '
             },
-            min: 20,
-            max: 100,
-            type: 'logarithmic',
+            min: 1.8,
+            max: 2.8,
+            // type: 'logarithmic',
             opposite: true,
         }, {
             labels: {
@@ -569,12 +586,17 @@ function _display(obj)
             name: name5,
             showInLegend:false,
             yAxis: 0,
+            color:'red',
+            min:1.8,
+            max:2.8,
             data: seriesshow31==0 ? h31 : emptylist,
         }, {
             name: name6,
             showInLegend:false,
             yAxis: 1,
-            color: 'red',
+            color: 'blue',
+            min:1.8,
+            max:2.8,
             data: seriesshow32==0 ? h32 : emptylist,
     
         }]
@@ -632,9 +654,9 @@ function _display(obj)
             categories: obj.data.dept,
             min: 0,
             max: 200,
-            scrollbar: {
-                enabled: true
-            }
+            // scrollbar: {
+            //     enabled: true
+            // }
         },
     
         yAxis: [{
@@ -646,8 +668,8 @@ function _display(obj)
             title: {
                 text: ' '
             },
-            min: 20,
-            max: 100,
+            min: 0.2,
+            max: 200,
             type: 'logarithmic',
             opposite: true,
         }, {
@@ -664,12 +686,18 @@ function _display(obj)
             name: name7,
             showInLegend:false,
             yAxis: 0,
+            color:'red',
+            dashStyle: 'shortdot',
+            min:0.2,
+            max:200,
             data: seriesshow41==0 ? h41 : emptylist,
         }, {
             name: name8,
             showInLegend:false,
             yAxis: 1,
-            color: 'red',
+            color: 'black',
+            min:0.2,
+            max:200,
             data: seriesshow42==0 ? h42 : emptylist,
     
         }]
@@ -727,9 +755,9 @@ function _display(obj)
             categories: obj.data.dept,
             min: 0,
             max: 200,
-            scrollbar: {
-                enabled: true
-            }
+            // scrollbar: {
+            //     enabled: true
+            // }
         },
     
         yAxis: [{
@@ -741,8 +769,8 @@ function _display(obj)
             title: {
                 text: ' '
             },
-            min: 20,
-            max: 100,
+            min: 0.2,
+            max: 200,
             type: 'logarithmic',
             opposite: true,
         }, {
@@ -759,12 +787,18 @@ function _display(obj)
             name: name9,
             showInLegend:false,
             yAxis: 0,
+            color: 'black',
+            dashStyle: 'shortdot',
+            min:0.2,
+            max:200,
             data: seriesshow51==0 ? h51 : emptylist,
         }, {
             name: name10,
             showInLegend:false,
             yAxis: 1,
             color: 'red',
+            min:0.2,
+            max:200,
             data: seriesshow52==0 ? h52 : emptylist,
     
         }]
@@ -772,21 +806,21 @@ function _display(obj)
     });
     document.getElementById("myForm").style.display = "none";
 
-    $('.firstgraph').css({
-        'border-right': '1px solid black'
-    });
-    $('.secondgraph').css({
-        'border-right': '1px solid black'
-    });
-    $('.thirdgraph').css({
-        'border-right': '1px solid black'
-    });
-    $('.fourthgraph').css({
-        'border-right': '1px solid black'
-    });
-    $('.fifthgraph').css({
-        'border-right': '1px solid black'
-    });
+    // $('.firstgraph').css({
+    //     'border-right': '1px solid black'
+    // });
+    // $('.secondgraph').css({
+    //     'border-right': '1px solid black'
+    // });
+    // $('.thirdgraph').css({
+    //     'border-right': '1px solid black'
+    // });
+    // $('.fourthgraph').css({
+    //     'border-right': '1px solid black'
+    // });
+    // $('.fifthgraph').css({
+    //     'border-right': '1px solid black'
+    // });
     $('.center').show('slow', function() {
       });
     $('.upperheading').show('slow', function() {
@@ -932,3 +966,50 @@ function fifthsecondcheckboxfunc()
     }
     _display(obj);
 }
+
+function isNumber(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+  }
+
+  function setFontSize(el) {
+    var fontSize = el.val();
+
+    if (isNumber(fontSize) && fontSize >= 0.5) {
+      $('body').css({
+        fontSize: fontSize + 'em'
+      });
+    } else if (fontSize) {
+      el.val('1');
+      $('body').css({
+        fontSize: '1em'
+      });
+    }
+  }
+
+  $(function () {
+
+    $('#fontSize')
+      .bind('change', function () {
+        setFontSize($(this));
+      })
+      .bind('keyup', function (e) {
+        if (e.keyCode == 27) {
+          $(this).val('1');
+          $('body').css({
+            fontSize: '1em'
+          });
+        } else {
+          setFontSize($(this));
+        }
+      });
+
+    $(window)
+      .bind('keyup', function (e) {
+        if (e.keyCode == 27) {
+          $('#fontSize').val('1');
+          $('body').css({
+            fontSize: '1em'
+          });
+        }
+      });
+  });

@@ -1,3 +1,18 @@
+.aboutTable 
+{
+  /* border-collapse: collapse; */
+  width: 100%;
+}
+
+.aboutTable tr {
+  border-bottom: 1px solid #ccc;
+}
+.aboutTable td{
+  border: 1px solid #ccc;
+}
+.aboutTable th {
+  border: 1px solid #ccc;
+}
 body{
   background: url(https://www.offshore-technology.com/wp-content/uploads/sites/6/2018/12/ONGC-offshore.jpg) no-repeat;
   background-size: cover;
@@ -7,7 +22,9 @@ body{
 .upperheading
 {
   /* background-color: red;  */
-  height: 25%;margin-top: 5%; margin-bottom: 10%;
+  height: 25%;
+  /* xmargin-top: 5%;*/
+   margin-bottom: 5%; 
    display: none;
 }
 .lowerheading
@@ -49,11 +66,40 @@ body{
 }
 
 /* The popup form - hidden by default */
+/* .form-popup {
+  display: none;
+  position: fixed;
+  bottom: 20;
+  right: 10;
+  border: 3px solid #f1f1f1;
+  margin: 0 auto;
+  z-index: 9;
+} */
 .form-popup {
   display: none;
   position: fixed;
-  bottom: 40;
-  right: 15;
+  bottom: 37%;
+  /* right: 50%; */
+  margin-left:40%;
+  /* margin-right: 50%; */
+  /* margin-top: 40%; */
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+.aboutform-popup{
+  display: none;
+  
+  position: fixed;
+  bottom: 15%;
+  /* right: 50%; */
+  width:50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 15px;
+  margin-left:15%;
+  /* margin-right: 50%; */
+  /* margin-top: 40%; */
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
@@ -140,13 +186,13 @@ body{
         width:15%;
         overflow-x: hidden;
         overflow-y: auto;
-        background-color: rgb(212, 209, 209);
+        background-color: rgba(255, 255, 255, 0.993);
         /* border: 1px solid black; */
       }
       .graph
       {
         width:100%;
-        height:30em;
+        height:33em;
         
         display: flex;
         border: 1px solid black;
@@ -154,7 +200,7 @@ body{
       }
       .centerheader
       {
-        height:7em;
+        height:4em;
         /* border: 1px solid black; */
         display: flex;
         /* background-color:red; */
@@ -173,7 +219,7 @@ body{
         border: 1px solid black;
         overflow-x: hidden;
         overflow-y: auto;
-        background-color: rgb(212, 209, 209);
+        background-color: rgba(255, 255, 255, 0.993);
       }
       .maincontentheader
       {
@@ -185,65 +231,66 @@ body{
       {
         display: flex;
         border: 2px solid white;
-        background-color: rgb(211, 211, 211);
+        background-color: rgba(255, 255, 255, 0.993);
         font-weight:bolder;
       }
       .header h2
       {
         margin-left: 40%;
         /* background-color: blue; */
+        /* font-family: 'Courier New', Courier, monospace; */
       }
       .header img
       {
-        width:80px;
-        height:50px ;
+        width:60px;
+        height:60px ;
         margin-left:35%;
-        margin-top: 0.5%;
+        margin-top: 0.25%;
         /* background-color: red; */
       }
-      .depth
+      /* .depth
       {
         width:8%;
         height: 100%;
         border: 1px solid black;
-      }
+      } */
       .firstgraph
       {
-        width:19.9%;
+        width:19%;
         height: 100%;
-        /* border-right: 1px solid black; */
+        border: 1px solid rgb(187, 187, 187);
       }
       .secondgraph
       {
-        width:19.9%;
+        width:25%;
         height: 100%;
         /* overflow-x: hidden;
         overflow-y: auto; */
-        /* border-right: 1px solid black; */
+        border: 1px solid rgb(187, 187, 187);
       }
       .thirdgraph
       {
-        width:19.9%;
+        width:19%;
         height: 100%;
-        /* border-right: 1px solid black; */
+        border: 1px solid rgb(187, 187, 187);
       }
       .fourthgraph
       {
-        width:19.9%;
+        width:19%;
         height: 100%;
-        /* border-right: 1px solid black; */
+        border: 1px solid rgb(187, 187, 187);
       }
       .fifthgraph
       {
-        width:19.9%;
+        width:18%;
         height: 100%;
-        /* border: 1px solid black; */
+        border: 1px solid rgb(187, 187, 187);
       }
       .treebody,.lasbody
       {
         height: 100%;
         border: 1px solid black;
-        background-color: rgb(212, 209, 209);
+        border: 1px solid rgb(187, 187, 187);
       }
       table {
     border-collapse: collapse;
@@ -268,7 +315,8 @@ th {
 /* ————————————————————–
   Tree core styles
 */
-.tree123 { margin: 1em; }
+.tree123 { margin: 1em;
+font-size: 13px; }
 
 .tree123 input {
   position: absolute;

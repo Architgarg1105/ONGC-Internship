@@ -15,13 +15,19 @@
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
     }
+    function openAboutForm() {
+      document.getElementById("aboutform").style.display = "block";
+    }
+    function closeAboutForm() {
+      document.getElementById("aboutform").style.display = "none";
+    }
     </script>
 </head>
 
 <body>
   <div class="header">
     
-    <h2 style="font-weight:bold;">LOG DATA VIEWER</h2>
+    <h2 style="font-weight:bold;">WELL LOG DATA VIEWER</h2>
     <img src="https://tse2.mm.bing.net/th?id=OIP.8PQc6nOPdilzMSFnbJsUbgHaHa&pid=Api">
     
     
@@ -29,8 +35,54 @@
   <ul class="list">
     <li class="items"><button class="open-button" onclick="openForm()">Upload</button></li>
     <li class="items"><button class="open-button" onClick="window.location.reload();">Refresh</button></li>
-    <li class="items"><a href="#">About</a></li>
-    <li class="items"><a href="#">Help</a></li>
+    <li class="items"><button class="open-button" onclick="openAboutForm()">About</button>
+      <div style="border: 1px solid black;"  class="aboutform-popup" id="aboutform">
+        <h2 style="text-align: center;">About Well Log Viewer</h2>
+        <p style=" text-align: justify;text-justify: inter-word; padding: 10px;">This is a web-based Well Log Viewer project which was done under ONGC.
+        Oil and Natural Gas Corporation is an Indian government-owned crude oil and natural gas corporation.
+         It is under the ownership of the Ministry of Petroleum and Natural Gas, Government of India.
+          Through this utility, we can visualize LAS files and get a graphical representation of the same using technologies like Python, Flask, HTML, CSS, and JavaScript.
+           We also get distinct information about the well and the graphs plotted.
+            Well Log Viewer is an online web-based utility to quickly visualize and interpret well log data.
+              User can upload a LAS file to this utility and visualize logs in different tracks/graphs.
+               At present a maximum of 5 logs can be plotted in a single track.</p>
+               <table class="aboutTable">
+                <thead >
+                  <tr><h3 style="text-align: center;">Team Members</h3></tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Contact</th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;">
+                  <tr>
+                    <td>Shreya Verma</td>
+                    <td>vermashreya0207@gmail.com</td>
+                </tr>
+                <tr>
+                  <td>Muskan Tyagi</td>
+                  <td>muskant252@gmail.com</td>
+              </tr>
+                    <tr>
+                        <td>Dhruv Goyal</td>
+                        <td>dhruvgoyal0306@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Rohan Rana</td>
+                        <td>geurecruitrohanrana@gmail.com</td>
+                    </tr>
+                    
+                <tr>
+                  <td>Archit Garg</td>
+                  <td>architgarglmg9.4@gmail.com</td>
+              </tr>
+                </tbody>
+            </table>
+            <br>
+               <button style="margin-bottom: 10px; cursor: pointer; font-weight: bold;font-size: 20px; margin-left:42%;width: 10%;height:30px; background-color: rgb(209, 205, 206);" type="button" class="btn cancel" onclick="closeAboutForm()">Close</button></div>
+      <br>
+    </li>
+    <!-- <li class="items"><a href="#">Help</a></li> -->
   </ul>
   <div class="form-popup" id="myForm">
     <form method="post" id="lasfile" class="form-container" Enctype="multipart/form-data">
@@ -46,24 +98,15 @@
       <div class="treebody">
         <ul class="tree123">
           <input type="checkbox" checked="checked" id="c1" />
-          <label class="tree_label" for="c1">Curves</label>
+          <label style="font-size: 17px; " class="tree_label" for="c1">Curves</label>
           <ul id="numberList">
-            <input type="checkbox" checked="checked" id="c2" />
+            <input  type="checkbox" checked="checked" id="c2" />
           </ul>
         </ul>
       </div>
     </div>
     <div class="center">
       <div  class="centerheader">
-        <div id="firstgraph" class="firstgraph">
-          <div class="upperheading"   id="firstfirst">
-          <input onclick="firstfirstcheckboxfunc()" type="checkbox" id="firstfirstcheckbox" checked>
-          </div>
-          <div class="lowerheading" id="firstsecond" >
-            <input onclick="firstsecondcheckboxfunc()" type="checkbox" id="firstsecondcheckbox" checked>
-          </div>
-        </div>
-
         <div id="secondgraph" class="secondgraph">
           <div class="upperheading"   id="secondfirst">
             <input onclick="secondfirstcheckboxfunc()" type="checkbox" id="secondfirstcheckbox" checked>
@@ -81,7 +124,14 @@
               <input onclick="thirdsecondcheckboxfunc()" type="checkbox" id="thirdsecondcheckbox" checked>
             </div>
         </div>
-
+        <div id="firstgraph" class="firstgraph">
+          <div class="upperheading"   id="firstfirst">
+          <input onclick="firstfirstcheckboxfunc()" type="checkbox" id="firstfirstcheckbox" checked>
+          </div>
+          <div class="lowerheading" id="firstsecond" >
+            <input onclick="firstsecondcheckboxfunc()" type="checkbox" id="firstsecondcheckbox" checked>
+          </div>
+        </div>
         <div id="fourthgraph" class="fourthgraph">
           <div class="upperheading"   id="fourthfirst">
             <input onclick="fourthfirstcheckboxfunc()" type="checkbox" id="fourthfirstcheckbox" checked>
@@ -99,13 +149,19 @@
             <input style="text-align:left;" onclick="fifthsecondcheckboxfunc()" type="checkbox" id="fifthsecondcheckbox" checked>
           </div>
         </div>
+
+       
+
+       
       </div>
       <div class="graph">
-        <div id="container" class="firstgraph"></div>
         <div id="container2" class="secondgraph"></div>
         <div id="container3" class="thirdgraph"></div>
+        <div id="container" class="firstgraph"></div>
         <div id="container4" class="fourthgraph"></div>
         <div id="container5" class="fifthgraph"></div>
+        
+       
       </div>
     </div>
     <div class="lasdata">
@@ -130,53 +186,5 @@
   </div>
   <script type="text/javascript" src="{{ url_for('static', filename = 'highcharts.js') }}"></script>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles.css') }}">
-  <script>
-    function isNumber(n) {
-      return !isNaN(parseFloat(n)) && isFinite(n);
-    }
-
-    function setFontSize(el) {
-      var fontSize = el.val();
-
-      if (isNumber(fontSize) && fontSize >= 0.5) {
-        $('body').css({
-          fontSize: fontSize + 'em'
-        });
-      } else if (fontSize) {
-        el.val('1');
-        $('body').css({
-          fontSize: '1em'
-        });
-      }
-    }
-
-    $(function () {
-
-      $('#fontSize')
-        .bind('change', function () {
-          setFontSize($(this));
-        })
-        .bind('keyup', function (e) {
-          if (e.keyCode == 27) {
-            $(this).val('1');
-            $('body').css({
-              fontSize: '1em'
-            });
-          } else {
-            setFontSize($(this));
-          }
-        });
-
-      $(window)
-        .bind('keyup', function (e) {
-          if (e.keyCode == 27) {
-            $('#fontSize').val('1');
-            $('body').css({
-              fontSize: '1em'
-            });
-          }
-        });
-    });
-  </script>
 </body>
 </html>

@@ -1,51 +1,60 @@
-.aboutTable 
-{
-  /* border-collapse: collapse; */
+.aboutTable {
   width: 100%;
 }
 
 .aboutTable tr {
   border-bottom: 1px solid #ccc;
 }
-.aboutTable td{
+
+.aboutTable td {
   border: 1px solid #ccc;
 }
+
 .aboutTable th {
   border: 1px solid #ccc;
 }
-body{
-  background: url(https://www.offshore-technology.com/wp-content/uploads/sites/6/2018/12/ONGC-offshore.jpg) no-repeat;
-  background-size: cover;
-  /* font-family: sans-serif; */
-  /* margin-top:40px; */
+
+#backgroundImage {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(https://www.offshore-technology.com/wp-content/uploads/sites/6/2018/12/ONGC-offshore.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.7;
+  filter: alpha(opacity=40);
+  height: 100%;
+  width: 100%;
 }
-.upperheading
-{
-  /* background-color: red;  */
+
+.upperheading {
   height: 25%;
-  /* xmargin-top: 5%;*/
-   margin-bottom: 5%; 
-   display: none;
+
+  margin-bottom: 5%;
+  display: none;
 }
-.lowerheading
-{
-  /* background-color: blue; */
-   height: 25%;
-   display: none;
+
+.lowerheading {
+  height: 25%;
+  display: none;
 }
-.red 
-{
-  font-weight:bold;
-  color:red;
+
+.red {
+  font-weight: bold;
+  color: red;
 }
-.green
-{
-  font-weight:bold;
-  color:green;
+
+.green {
+  font-weight: bold;
+  color: green;
 }
-#black
-{
-  color:black;
+
+#black {
+  color: black;
 }
 
 .open-button {
@@ -54,65 +63,44 @@ body{
   padding: 16px 20px;
   border: none;
   cursor: pointer;
-  /* opacity: 0.8; */
-  /* position: fixed; */
-  /* bottom: 23px;
-  right: 28px; */
-  /* width: 280px; */
 }
-.open-button:hover
-{
+
+.open-button:hover {
   background-color: black;
 }
 
-/* The popup form - hidden by default */
-/* .form-popup {
-  display: none;
-  position: fixed;
-  bottom: 20;
-  right: 10;
-  border: 3px solid #f1f1f1;
-  margin: 0 auto;
-  z-index: 9;
-} */
 .form-popup {
   display: none;
   position: fixed;
   bottom: 37%;
-  /* right: 50%; */
-  margin-left:40%;
-  /* margin-right: 50%; */
-  /* margin-top: 40%; */
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
-.aboutform-popup{
-  display: none;
-  
-  position: fixed;
-  bottom: 15%;
-  /* right: 50%; */
-  width:50%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: white;
-  border-radius: 15px;
-  margin-left:15%;
-  /* margin-right: 50%; */
-  /* margin-top: 40%; */
+  margin-left: 40%;
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
 
-/* Add styles to the form container */
+.aboutform-popup {
+  display: none;
+
+  position: fixed;
+  bottom: 15%;
+  width: 50%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: white;
+  border-radius: 15px;
+  margin-left: 15%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
 .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: white;
 }
 
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
+.form-container input[type=text],
+.form-container input[type=password] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -120,13 +108,12 @@ body{
   background: #f1f1f1;
 }
 
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+.form-container input[type=text]:focus,
+.form-container input[type=password]:focus {
   background-color: #ddd;
   outline: none;
 }
 
-/* Set a style for the submit/login button */
 .form-container .btn {
   background-color: #04AA6D;
   color: white;
@@ -134,21 +121,20 @@ body{
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   opacity: 0.8;
 }
 
-/* Add a red background color to the cancel button */
 .form-container .cancel {
   background-color: red;
 }
 
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover,
+.open-button:hover {
   opacity: 1;
 }
 
-.list{
+.list {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -171,191 +157,169 @@ body{
 .items a:hover {
   background-color: #111;
 }
-.maincontent
-      {
-        text-align: center;
-        display:flex;
-        height:37em;
-        width:99%;
-        margin-left: 0.5%;
-        margin-right: 0.5%;
-      }
-      .tree
-      {
-        display:none;
-        width:15%;
-        overflow-x: hidden;
-        overflow-y: auto;
-        background-color: rgba(255, 255, 255, 0.993);
-        /* border: 1px solid black; */
-      }
-      .graph
-      {
-        width:100%;
-        height:33em;
-        
-        display: flex;
-        border: 1px solid black;
-        /* background-color: lawngreen; */
-      }
-      .centerheader
-      {
-        height:4em;
-        /* border: 1px solid black; */
-        display: flex;
-        /* background-color:red; */
-      }
-      .center
-      {
-        width:70%;
-        display:none;
-        height:100%;
-        /* border: 1px solid black; */
-      }
-      .lasdata
-      {
-        display:none;
-        width:15%;
-        border: 1px solid black;
-        overflow-x: hidden;
-        overflow-y: auto;
-        background-color: rgba(255, 255, 255, 0.993);
-      }
-      .maincontentheader
-      {
-        height:20%;
-        /* background-color: red; */
-        border: 1px solid black;
-      }
-      .header
-      {
-        display: flex;
-        border: 2px solid white;
-        background-color: rgba(255, 255, 255, 0.993);
-        font-weight:bolder;
-      }
-      .header h2
-      {
-        margin-left: 40%;
-        /* background-color: blue; */
-        /* font-family: 'Courier New', Courier, monospace; */
-      }
-      .header img
-      {
-        width:60px;
-        height:60px ;
-        margin-left:35%;
-        margin-top: 0.25%;
-        /* background-color: red; */
-      }
-      /* .depth
-      {
-        width:8%;
-        height: 100%;
-        border: 1px solid black;
-      } */
-      .firstgraph
-      {
-        width:19%;
-        height: 100%;
-        border: 1px solid rgb(187, 187, 187);
-      }
-      .secondgraph
-      {
-        width:25%;
-        height: 100%;
-        /* overflow-x: hidden;
-        overflow-y: auto; */
-        border: 1px solid rgb(187, 187, 187);
-      }
-      .thirdgraph
-      {
-        width:19%;
-        height: 100%;
-        border: 1px solid rgb(187, 187, 187);
-      }
-      .fourthgraph
-      {
-        width:19%;
-        height: 100%;
-        border: 1px solid rgb(187, 187, 187);
-      }
-      .fifthgraph
-      {
-        width:18%;
-        height: 100%;
-        border: 1px solid rgb(187, 187, 187);
-      }
-      .treebody,.lasbody
-      {
-        height: 100%;
-        border: 1px solid black;
-        border: 1px solid rgb(187, 187, 187);
-      }
-      table {
-    border-collapse: collapse;
-    width: 100%;
+
+.maincontent {
+  text-align: center;
+  display: flex;
+  height: 37em;
+  width: 100%;
+}
+
+.tree {
+  display: none;
+  width: 15%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.993);
+}
+
+.graph {
+  width: 100%;
+  height: 33em;
+  display: flex;
+}
+
+.centerheader {
+  height: 4em;
+  display: flex;
+  background-color: white;
+}
+
+.center {
+  width: 70%;
+  display: none;
+  height: 100%;
+}
+
+.lasdata {
+  display: none;
+  width: 15%;
+  border: 1px solid black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.993);
+}
+
+.maincontentheader {
+  height: 20%;
+  border: 1px solid black;
+}
+
+.header {
+  display: flex;
+  border: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.993);
+  font-weight: bolder;
+}
+
+.header h2 {
+  margin-left: 40%;
+}
+
+.header img {
+  width: 60px;
+  height: 60px;
+  margin-left: 35%;
+  margin-top: 0.25%;
+}
+
+.firstgraph {
+  width: 19%;
+  height: 100%;
+  border-right: 1px solid rgb(187, 187, 187);
+}
+
+.secondgraph {
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid rgb(187, 187, 187);
+}
+
+.thirdgraph {
+  width: 19%;
+  height: 100%;
+  border-right: 1px solid rgb(187, 187, 187);
+}
+
+.fourthgraph {
+  width: 19%;
+  height: 100%;
+  border-right: 1px solid rgb(187, 187, 187);
+}
+
+.fifthgraph {
+  width: 18%;
+  height: 100%;
+}
+
+.treebody,
+.lasbody {
+  height: 100%;
+  border: 1px solid black;
+  border: 1px solid rgb(187, 187, 187);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
 tr {
-    border-bottom: 1px solid rgb(48, 44, 44);
-    padding-top: 15px;
+  border-bottom: 1px solid rgb(48, 44, 44);
+  padding-top: 15px;
 }
 
 th {
-    text-align: center;    
+  text-align: center;
 }
-#fontSizeWrapper { font-size: 16px; }
+
+#fontSizeWrapper {
+  font-size: 16px;
+}
 
 #fontSize {
   width: 100px;
   font-size: 1em;
-  }
-
-/* ————————————————————–
-  Tree core styles
-*/
-.tree123 { margin: 1em;
-font-size: 13px; }
+}
+.tree123 {
+  margin: 1em;
+  font-size: 13px;
+}
 
 .tree123 input {
   position: absolute;
   clip: rect(0, 0, 0, 0);
-  }
+}
 
-.tree123 input ~ ul { display: none; }
+.tree123 input~ul {
+  display: none;
+}
 
-.tree123 input:checked ~ ul { display: block; }
-
-/* ————————————————————–
-  Tree rows
-*/
+.tree123 input:checked~ul {
+  display: block;
+}
 .tree123 li {
   line-height: 1.2;
   position: relative;
   padding: 0 0 1em 1em;
-  }
-
-.tree123 ul li { padding: 1em 0 0 1em; }
-
-.tree123 > li:last-child { padding-bottom: 0; }
-
-/* ————————————————————–
-  Tree labels
-*/
+}
+.tree123 ul li {
+  padding: 1em 0 0 1em;
+}
+.tree123>li:last-child {
+  padding-bottom: 0;
+}
 .tree_label {
   position: relative;
   display: inline-block;
   background: #fff;
-  }
-
-label.tree_label { cursor: pointer; }
-
-label.tree_label:hover { color: #666; }
-
-/* ————————————————————–
-  Tree expanded icon
-*/
+}
+label.tree_label {
+  cursor: pointer;
+}
+label.tree_label:hover {
+  color: #666;
+}
 label.tree_label:before {
   background: #000;
   color: #fff;
@@ -369,13 +333,10 @@ label.tree_label:before {
   content: '+';
   text-align: center;
   line-height: .9em;
-  }
-
-:checked ~ label.tree_label:before { content: '–'; }
-
-/* ————————————————————–
-  Tree branches
-*/
+}
+:checked~label.tree_label:before {
+  content: '–';
+}
 .tree123 li:before {
   position: absolute;
   top: 0;
@@ -385,7 +346,7 @@ label.tree_label:before {
   width: 0;
   border-left: 1px solid #777;
   content: "";
-  }
+}
 
 .tree_label:after {
   position: absolute;
@@ -398,11 +359,12 @@ label.tree_label:before {
   border-left: 1px solid #777;
   border-radius: 0 0 0 .3em;
   content: '';
-  }
+}
 
-label.tree_label:after { border-bottom: 0; }
-
-:checked ~ label.tree_label:after {
+label.tree_label:after {
+  border-bottom: 0;
+}
+:checked~label.tree_label:after {
   border-radius: 0 .3em 0 0;
   border-top: 1px solid #777;
   border-right: 1px solid #777;
@@ -411,15 +373,14 @@ label.tree_label:after { border-bottom: 0; }
   bottom: 0;
   top: 0.5em;
   height: auto;
-  }
-
+}
 .tree123 li:last-child:before {
   height: 1em;
   bottom: auto;
-  }
-
-.tree123 > li:last-child:before { display: none; }
-
+}
+.tree123>li:last-child:before {
+  display: none;
+}
 .tree_custom {
   display: block;
   background: #eee;

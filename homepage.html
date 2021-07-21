@@ -1,158 +1,169 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Home Page</title>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://code.highcharts.com/stock/6.0.3/highstock.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     function openForm() {
       document.getElementById("myForm").style.display = "block";
     }
+
     function closeForm() {
       document.getElementById("myForm").style.display = "none";
     }
+
     function openAboutForm() {
       document.getElementById("aboutform").style.display = "block";
+      document.getElementById("maincontent").style.opacity = "0.5";
     }
+
     function closeAboutForm() {
       document.getElementById("aboutform").style.display = "none";
+      document.getElementById("maincontent").style.opacity = "1";
     }
-    </script>
+  </script>
 </head>
 
 <body>
+  <div id="backgroundImage">
+  </div>
   <div class="header">
-    
+
     <h2 style="font-weight:bold;">WELL LOG DATA VIEWER</h2>
     <img src="https://tse2.mm.bing.net/th?id=OIP.8PQc6nOPdilzMSFnbJsUbgHaHa&pid=Api">
-    
-    
+
+
   </div>
   <ul class="list">
     <li class="items"><button class="open-button" onclick="openForm()">Upload</button></li>
     <li class="items"><button class="open-button" onClick="window.location.reload();">Refresh</button></li>
-    <li class="items"><button class="open-button" onclick="openAboutForm()">About</button>
-      <div style="border: 1px solid black;"  class="aboutform-popup" id="aboutform">
+    <li class="items"><button id="aboutButton" class="open-button" onclick="openAboutForm()">About</button>
+      <div style="border: 1px solid black;" class="aboutform-popup" id="aboutform">
         <h2 style="text-align: center;">About Well Log Viewer</h2>
-        <p style=" text-align: justify;text-justify: inter-word; padding: 10px;">This is a web-based Well Log Viewer project which was done under ONGC.
-        Oil and Natural Gas Corporation is an Indian government-owned crude oil and natural gas corporation.
-         It is under the ownership of the Ministry of Petroleum and Natural Gas, Government of India.
-          Through this utility, we can visualize LAS files and get a graphical representation of the same using technologies like Python, Flask, HTML, CSS, and JavaScript.
-           We also get distinct information about the well and the graphs plotted.
-            Well Log Viewer is an online web-based utility to quickly visualize and interpret well log data.
-              User can upload a LAS file to this utility and visualize logs in different tracks/graphs.
-               At present a maximum of 5 logs can be plotted in a single track.</p>
-               <table class="aboutTable">
-                <thead >
-                  <tr><h3 style="text-align: center;">Team Members</h3></tr>
-                    <tr>
-                        <th>Name</th>
-                        <th>Contact</th>
-                    </tr>
-                </thead>
-                <tbody style="text-align: center;">
-                  <tr>
-                    <td>Shreya Verma</td>
-                    <td>vermashreya0207@gmail.com</td>
-                </tr>
-                <tr>
-                  <td>Muskan Tyagi</td>
-                  <td>muskant252@gmail.com</td>
-              </tr>
-                    <tr>
-                        <td>Dhruv Goyal</td>
-                        <td>dhruvgoyal0306@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td>Rohan Rana</td>
-                        <td>geurecruitrohanrana@gmail.com</td>
-                    </tr>
-                    
-                <tr>
-                  <td>Archit Garg</td>
-                  <td>architgarglmg9.4@gmail.com</td>
-              </tr>
-                </tbody>
-            </table>
-            <br>
-               <button style="margin-bottom: 10px; cursor: pointer; font-weight: bold;font-size: 20px; margin-left:42%;width: 10%;height:30px; background-color: rgb(209, 205, 206);" type="button" class="btn cancel" onclick="closeAboutForm()">Close</button></div>
+        <p style=" text-align: justify;text-justify: inter-word; padding: 10px;">This is a web-based Well Log Viewer
+          project which was done under ONGC.
+          Oil and Natural Gas Corporation is an Indian government-owned crude oil and natural gas corporation.
+          It is under the ownership of the Ministry of Petroleum and Natural Gas, Government of India.
+          Through this utility, we can visualize LAS files and get a graphical representation of the same using
+          technologies like Python, Flask, HTML, CSS, and JavaScript.
+          We also get distinct information about the well and the graphs plotted.
+          Well Log Viewer is an online web-based utility to quickly visualize and interpret well log data.
+          User can upload a LAS file to this utility and visualize logs in different tracks/graphs.
+          At present a maximum of 5 logs can be plotted in a single track.</p>
+        <table class="aboutTable">
+          <thead>
+            <tr>
+              <h3 style="text-align: center;">Team Members</h3>
+            </tr>
+            <tr>
+              <th>Name</th>
+              <th>Contact</th>
+            </tr>
+          </thead>
+          <tbody style="text-align: center;">
+            <tr>
+              <td>Shreya Verma</td>
+              <td>vermashreya0207@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Muskan Tyagi</td>
+              <td>muskant252@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Dhruv Goyal</td>
+              <td>dhruvgoyal0306@gmail.com</td>
+            </tr>
+            <tr>
+              <td>Rohan Rana</td>
+              <td>geurecruitrohanrana@gmail.com</td>
+            </tr>
+
+            <tr>
+              <td>Archit Garg</td>
+              <td>architgarglmg9.4@gmail.com</td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <button
+          style="margin-bottom: 10px; cursor: pointer; font-weight: bold;font-size: 20px; margin-left:42%;width: 10%;height:30px; background-color: rgb(209, 205, 206);"
+          type="button" class="btn cancel" onclick="closeAboutForm()">Close</button>
+      </div>
       <br>
     </li>
-    <!-- <li class="items"><a href="#">Help</a></li> -->
   </ul>
   <div class="form-popup" id="myForm">
     <form method="post" id="lasfile" class="form-container" Enctype="multipart/form-data">
       <b>
-        <input  style="margin:auto;border:3px solid black;cursor: pointer;" type="file" name="file" multiple><br><br>
+        <input style="margin:auto;border:3px solid black;cursor: pointer;" type="file" name="file" multiple><br><br>
         <button type="button" onclick="lasfilefunc()" class="btn btn-default">Upload</button>
         <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
       </b>
     </form>
   </div>
-  <div class="maincontent">
+  <div id="maincontent" class="maincontent">
     <div class="tree">
       <div class="treebody">
         <ul class="tree123">
           <input type="checkbox" checked="checked" id="c1" />
           <label style="font-size: 17px; " class="tree_label" for="c1">Curves</label>
           <ul id="numberList">
-            <input  type="checkbox" checked="checked" id="c2" />
+            <input type="checkbox" checked="checked" id="c2" />
           </ul>
         </ul>
       </div>
     </div>
     <div class="center">
-      <div  class="centerheader">
+      <div class="centerheader">
         <div id="secondgraph" class="secondgraph">
-          <div class="upperheading"   id="secondfirst">
+          <div class="upperheading" id="secondfirst">
             <input onclick="secondfirstcheckboxfunc()" type="checkbox" id="secondfirstcheckbox" checked>
-            </div>
-            <div class="lowerheading" id="secondsecond" >
-              <input onclick="secondsecondcheckboxfunc()" type="checkbox" id="secondsecondcheckbox" checked>
-            </div>
+          </div>
+          <div class="lowerheading" id="secondsecond">
+            <input onclick="secondsecondcheckboxfunc()" type="checkbox" id="secondsecondcheckbox" checked>
+          </div>
         </div>
 
         <div id="thirdgraph" class="thirdgraph">
-          <div class="upperheading"   id="thirdfirst">
+          <div class="upperheading" id="thirdfirst">
             <input onclick="thirdfirstcheckboxfunc()" type="checkbox" id="thirdfirstcheckbox" checked>
-            </div>
-            <div class="lowerheading" id="thirdsecond" >
-              <input onclick="thirdsecondcheckboxfunc()" type="checkbox" id="thirdsecondcheckbox" checked>
-            </div>
+          </div>
+          <div class="lowerheading" id="thirdsecond">
+            <input onclick="thirdsecondcheckboxfunc()" type="checkbox" id="thirdsecondcheckbox" checked>
+          </div>
         </div>
         <div id="firstgraph" class="firstgraph">
-          <div class="upperheading"   id="firstfirst">
-          <input onclick="firstfirstcheckboxfunc()" type="checkbox" id="firstfirstcheckbox" checked>
+          <div class="upperheading" id="firstfirst">
+            <input onclick="firstfirstcheckboxfunc()" type="checkbox" id="firstfirstcheckbox" checked>
           </div>
-          <div class="lowerheading" id="firstsecond" >
+          <div class="lowerheading" id="firstsecond">
             <input onclick="firstsecondcheckboxfunc()" type="checkbox" id="firstsecondcheckbox" checked>
           </div>
         </div>
         <div id="fourthgraph" class="fourthgraph">
-          <div class="upperheading"   id="fourthfirst">
+          <div class="upperheading" id="fourthfirst">
             <input onclick="fourthfirstcheckboxfunc()" type="checkbox" id="fourthfirstcheckbox" checked>
-            </div>
-            <div class="lowerheading" id="fourthsecond" >
-              <input onclick="fourthsecondcheckboxfunc()" type="checkbox" id="fourthsecondcheckbox" checked>
-            </div>
+          </div>
+          <div class="lowerheading" id="fourthsecond">
+            <input onclick="fourthsecondcheckboxfunc()" type="checkbox" id="fourthsecondcheckbox" checked>
+          </div>
         </div>
 
         <div id="fifthgraph" class="fifthgraph">
-          <div class="upperheading"   id="fifthfirst">
+          <div class="upperheading" id="fifthfirst">
             <input onclick="fifthfirstcheckboxfunc()" type="checkbox" id="fifthfirstcheckbox" checked>
           </div>
-          <div class="lowerheading" id="fifthsecond" >
-            <input style="text-align:left;" onclick="fifthsecondcheckboxfunc()" type="checkbox" id="fifthsecondcheckbox" checked>
+          <div class="lowerheading" id="fifthsecond">
+            <input style="text-align:left;" onclick="fifthsecondcheckboxfunc()" type="checkbox" id="fifthsecondcheckbox"
+              checked>
           </div>
         </div>
-
-       
-
-       
       </div>
       <div class="graph">
         <div id="container2" class="secondgraph"></div>
@@ -160,8 +171,6 @@
         <div id="container" class="firstgraph"></div>
         <div id="container4" class="fourthgraph"></div>
         <div id="container5" class="fifthgraph"></div>
-        
-       
       </div>
     </div>
     <div class="lasdata">
@@ -181,10 +190,11 @@
       </div>
     </div>
   </div>
-      </div>
-    </div>
+  </div>
+  </div>
   </div>
   <script type="text/javascript" src="{{ url_for('static', filename = 'highcharts.js') }}"></script>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'styles.css') }}">
 </body>
+
 </html>
